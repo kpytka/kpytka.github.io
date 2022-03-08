@@ -1,0 +1,2587 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essentials &#8212; Code in Julia &lt;br&gt;like it&#39;s your  mother tongue!</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/language_data.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >let toggleHintShow = 'Click to show';</script>
+    <script >let toggleHintHide = 'Click to hide';</script>
+    <script >let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script >const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/Babel2.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Code in Julia <br>like it's your  mother tongue!</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Intro
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Essentials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="numeric_types.html">
+   Numeric types
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="data_structures.html">
+   Data structures
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="broadcasting.html">
+   Broadcasting: arrays meet scalars
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="functions.html">
+   Functions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="control_flow.html">
+   Control flow
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="loops.html">
+   Loops
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="random_numbers.html">
+   Random numbers
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Pipe.html">
+   Pipes
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Applications
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="bisection.html">
+   Bisection
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="labor_search.html">
+   Labor search
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="Huggett.html">
+   Standard incomplete market economy in continuous time
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Misc.
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="packages.html">
+   Packages
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/Basics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FBasics.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Basics.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numeric-types">
+   Numeric types
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-arithmetic-operations">
+   Basic arithmetic operations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-structures">
+   Data structures
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arrays">
+     Arrays
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#assignment-operator-and-arrays-easy-for-pythonistas-confusing-for-matlabians">
+       Assignment operator (
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         =
+        </span>
+       </code>
+       ) and arrays: easy for Pythonistas, confusing for Matlabians
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionaries">
+     Dictionaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ranges">
+     Ranges
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tuples">
+     Tuples
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#broadcasting-where-arrays-meet-scalars">
+   Broadcasting (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .
+    </span>
+   </code>
+   ): where arrays meet scalars
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Essentials</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#numeric-types">
+   Numeric types
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#basic-arithmetic-operations">
+   Basic arithmetic operations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#data-structures">
+   Data structures
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#arrays">
+     Arrays
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#assignment-operator-and-arrays-easy-for-pythonistas-confusing-for-matlabians">
+       Assignment operator (
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         =
+        </span>
+       </code>
+       ) and arrays: easy for Pythonistas, confusing for Matlabians
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dictionaries">
+     Dictionaries
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#ranges">
+     Ranges
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tuples">
+     Tuples
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#broadcasting-where-arrays-meet-scalars">
+   Broadcasting (
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     .
+    </span>
+   </code>
+   ): where arrays meet scalars
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="essentials">
+<h1>Essentials<a class="headerlink" href="#essentials" title="Permalink to this headline">¶</a></h1>
+<p>In this part of the script I am going to go through some</p>
+<div class="section" id="numeric-types">
+<h2>Numeric types<a class="headerlink" href="#numeric-types" title="Permalink to this headline">¶</a></h2>
+<p>First, let’s focus on different and most basic (and useful for daily use) numerical types of objects in <code class="docutils literal notranslate"><span class="pre">Julia</span></code>.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Desc.</p></th>
+<th class="head"><p>Smallest number</p></th>
+<th class="head"><p>Largest number</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Int8</span></code></p></td>
+<td><p>signed integers</p></td>
+<td><p><span class="math notranslate nohighlight">\(-2^7\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2^7-1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">UInt8</span></code></p></td>
+<td><p>unsigned integers (<em>read:</em> natural numbers)</p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2^8\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Int16</span></code></p></td>
+<td><p>signed integers</p></td>
+<td><p><span class="math notranslate nohighlight">\(-2^{15}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2^{15}-1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">UInt16</span></code></p></td>
+<td><p>unsigned integers (<em>read:</em> natural numbers)</p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2^{16}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Int64</span></code></p></td>
+<td><p>signed integers</p></td>
+<td><p><span class="math notranslate nohighlight">\(-2^{63}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2^{63}-1\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">UInt64</span></code></p></td>
+<td><p>unsigned integers (<em>read:</em> natural numbers)</p></td>
+<td><p><span class="math notranslate nohighlight">\(0\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2^{64}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+<p>There is also an alias <code class="docutils literal notranslate"><span class="pre">Int</span></code> for integers with the default number of bits for your architecture (32 or 64).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>For quiet execution of line <code class="docutils literal notranslate"><span class="pre">x</span> <span class="pre">=</span> <span class="pre">1</span></code>, we should add <code class="docutils literal notranslate"><span class="pre">;</span></code> at the end of the line.
+This way the assignment will be made without printing the result.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>We can explicitly force <code class="docutils literal notranslate"><span class="pre">Julia</span></code> to set the precision of our integers:</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In <code class="docutils literal notranslate"><span class="pre">Julia</span></code> we can use special unicode characters for naming objects, like <code class="docutils literal notranslate"><span class="pre">α</span></code>  or even <code class="docutils literal notranslate"><span class="pre">αₖʲ</span></code>. In VS Code, to get <code class="docutils literal notranslate"><span class="pre">α</span></code> you have to type <code class="docutils literal notranslate"><span class="pre">\alpha</span></code> and press <code class="docutils literal notranslate"><span class="pre">tab</span></code>. <code class="docutils literal notranslate"><span class="pre">αₖʲ</span></code> can be obtained by typing combination <code class="docutils literal notranslate"><span class="pre">\alpha</span></code>, <code class="docutils literal notranslate"><span class="pre">tab</span></code>, <code class="docutils literal notranslate"><span class="pre">\_k</span></code>, <code class="docutils literal notranslate"><span class="pre">tab</span></code>, <code class="docutils literal notranslate"><span class="pre">\^j</span></code>, <code class="docutils literal notranslate"><span class="pre">tab</span></code>.</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">α</span> <span class="o">=</span> <span class="kt">Int8</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="kt">Int8</span><span class="p">(</span><span class="mi">2</span><span class="o">^</span><span class="mi">7</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>127
+</pre></div>
+</div>
+</div>
+</div>
+<p>However, we have to remember about the ranges of used types:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="kt">Int8</span><span class="p">(</span><span class="mi">2</span><span class="o">^</span><span class="mi">8</span><span class="p">)</span> <span class="c">#Error message</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">InexactError</span>: trunc(Int8, 256)
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">throw_inexacterror</span><span class="p">(</span><span class="n">f</span><span class="p">::</span><span class="n">Symbol</span><span class="p">,</span> <span class="c1">#unused#::Type{Int8}, val::Int64)</span>
+   <span class="o">@</span> <span class="n">Core</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">602</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="n">checked_trunc_sint</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">624</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">toInt8</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">639</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="n">Int8</span><span class="p">(</span><span class="n">x</span><span class="p">::</span><span class="n">Int64</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Core</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">749</span>
+ <span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="nb">eval</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">7</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1094</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Unsigned integers are not super useful due to their default hexadecimal notation:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span> <span class="kt">UInt</span><span class="p">(</span><span class="mi">1018</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>UInt(1018) = 0x00000000000003fa
+</pre></div>
+</div>
+</div>
+</div>
+<p>Another type of numbers in <code class="docutils literal notranslate"><span class="pre">Julia</span></code> are floating-point values</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Type</p></th>
+<th class="head"><p>Number of bits</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Float16</span></code></p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Float32</span></code></p></td>
+<td><p>32</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Float64</span></code></p></td>
+<td><p>64</p></td>
+</tr>
+</tbody>
+</table>
+<p>Similarly to integers, <code class="docutils literal notranslate"><span class="pre">float</span></code> refers to floating-point values with the default number of bits for your architecture (32 or 64).</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Notice the difference in letter capitalization: <code class="docutils literal notranslate"><span class="pre">float</span></code> vs. <code class="docutils literal notranslate"><span class="pre">Int</span></code>!</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">w</span> <span class="o">=</span> <span class="o">.</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">typeof</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Float64
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="basic-arithmetic-operations">
+<h2>Basic arithmetic operations<a class="headerlink" href="#basic-arithmetic-operations" title="Permalink to this headline">¶</a></h2>
+<p>On the surface, arithmetic operations (<code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code>, <code class="docutils literal notranslate"><span class="pre">/</span></code>) in <code class="docutils literal notranslate"><span class="pre">Julia</span></code> are very similar to the ones known from such languages as <code class="docutils literal notranslate"><span class="pre">Matlab</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3
+</pre></div>
+</div>
+</div>
+</div>
+<p>For presenting results of the operation macro <code class="docutils literal notranslate"><span class="pre">&#64;show</span></code> can be quite useful:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="nd">@show</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span> <span class="o">+</span> <span class="o">.</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x + y + 0.2 = 3.2
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.2
+</pre></div>
+</div>
+</div>
+</div>
+<p>If we combine two different numeric types, <code class="docutils literal notranslate"><span class="pre">Julia</span></code> will try to coerce the less general object to more general one:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="kt">Int</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">float</span><span class="p">(</span><span class="o">.</span><span class="mi">964</span><span class="p">)</span>
+<span class="nd">@show</span> <span class="n">z</span> <span class="o">=</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span>
+
+<span class="n">typeof</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>z = x + y = 42.964
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Float64
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can use also <code class="docutils literal notranslate"><span class="pre">Lisp</span></code>-like syntax (which we find in <code class="docutils literal notranslate"><span class="pre">R</span></code> as well. Sometimes this can be very useful, and other times, it can be quite <a class="reference external" href="https://twitter.com/mjskay/status/1454952248937783304">scary</a>):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>42.964
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span>  <span class="o">^</span><span class="p">(</span><span class="o">*</span><span class="p">(</span> <span class="mi">3</span><span class="p">,</span> <span class="o">+</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span> <span class="p">),</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(3 * (1 + 2)) ^ 5 = 59049
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>59049
+</pre></div>
+</div>
+</div>
+</div>
+<p>There are several ways to divide numbers.
+The most natural one is by using <code class="docutils literal notranslate"><span class="pre">/</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span> <span class="mi">1</span><span class="o">/</span><span class="mi">2</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 / 2 = 0.5
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5
+</pre></div>
+</div>
+</div>
+</div>
+<p>If for some reason, we want to use common fractions instead of decimals, then we have to use <code class="docutils literal notranslate"><span class="pre">//</span></code> instead:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">//</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1//2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Within</span> <span class="n">common</span> <span class="n">fractions</span><span class="p">,</span> <span class="n">we</span> <span class="n">can</span> <span class="n">perform</span> <span class="n">arithmetic</span> <span class="n">operations</span><span class="o">:</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span> <span class="mi">1</span><span class="o">//</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span><span class="o">//</span><span class="mi">3</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 // 2 + 1 // 3 = 5//6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span> <span class="p">(</span><span class="mi">1</span><span class="o">//</span><span class="mi">2</span><span class="p">)</span><span class="o">^</span><span class="mi">10</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1 // 2) ^ 10 = 1//1024
+</pre></div>
+</div>
+</div>
+</div>
+<p>But due to coercion in operations over different types, we might lose it:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span> <span class="mi">1</span><span class="o">//</span><span class="mi">2</span> <span class="o">+</span> <span class="o">.</span><span class="mi">25</span><span class="p">;</span>
+<span class="nd">@show</span> <span class="mi">1</span><span class="o">//</span><span class="mi">2</span> <span class="o">+</span> <span class="nb">π</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 // 2 + 0.25 = 0.75
+1 // 2 + π = 3.641592653589793
+</pre></div>
+</div>
+</div>
+</div>
+<p>We perform integer division by using <code class="docutils literal notranslate"><span class="pre">div</span></code> or <code class="docutils literal notranslate"><span class="pre">÷</span></code> (to get this symbol type <code class="docutils literal notranslate"><span class="pre">\div</span></code> and <code class="docutils literal notranslate"><span class="pre">tab</span></code>):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span> <span class="n">div</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="nd">@show</span>   <span class="o">÷</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="nd">@show</span>     <span class="mi">5</span><span class="o">÷</span><span class="mi">3</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>div(5, 3) = 1
+5 ÷ 3 = 1
+5 ÷ 3 = 1
+</pre></div>
+</div>
+</div>
+</div>
+<p>We get remainder by using <code class="docutils literal notranslate"><span class="pre">rem</span></code> or <code class="docutils literal notranslate"><span class="pre">%</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span> <span class="n">rem</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="nd">@show</span>   <span class="o">%</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="nd">@show</span>     <span class="mi">5</span><span class="o">%</span><span class="mi">3</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>rem(5, 3) = 2
+5 % 3 = 2
+5 % 3 = 2
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="data-structures">
+<h2>Data structures<a class="headerlink" href="#data-structures" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="arrays">
+<span id="id1"></span><h3>Arrays<a class="headerlink" href="#arrays" title="Permalink to this headline">¶</a></h3>
+<p>Arrays are one of the most important data structures for economists. They are equivalent of vectors and matrices in <code class="docutils literal notranslate"><span class="pre">Matlab</span></code> or <code class="docutils literal notranslate"><span class="pre">R</span></code>.
+Arrays are multi-dimensional objects containing numbers (or different objects).</p>
+<p>A vector is a one-dimensional array. To get a row vector you use the following convention:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1×3 Matrix{Int64}:
+ 1  2  3
+</pre></div>
+</div>
+</div>
+</div>
+<p>You get column vectors by using <code class="docutils literal notranslate"><span class="pre">;</span></code> as the separator of elements:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">;</span> <span class="mi">2</span><span class="p">;</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-element Vector{Int64}:
+ 1
+ 2
+ 3
+</pre></div>
+</div>
+</div>
+</div>
+<p>All elements of arrays must be of the same type. In case of type incompatibility across elements, coercion is performed:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span> <span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="nb">π</span> <span class="mf">2.3</span><span class="p">]</span>
+
+<span class="nd">@show</span> <span class="n">typeof</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="c">#It&#39;s Float64 despite the first element being an integer.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>c = [1 π 2.3] = [1.0 3.141592653589793 2.3]
+typeof(c) = Matrix{Float64}
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Matrix{Float64} (alias for Array{Float64, 2})
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">;</span>
+     <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×3 Matrix{Int64}:
+ 1  2  3
+ 3  4  5
+</pre></div>
+</div>
+</div>
+</div>
+<p>It is a good practice to initialize arrays before assigning values to their elements.
+To create an empty one-dimensional array with <code class="docutils literal notranslate"><span class="pre">K</span></code> elements of type <code class="docutils literal notranslate"><span class="pre">TYPE</span></code>
+you use <code class="docutils literal notranslate"><span class="pre">Array{TYPE}(undef,</span> <span class="pre">K)</span></code>.
+Below an illustrating example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="kt">Array</span><span class="p">{</span><span class="kt">Float64</span><span class="p">}(</span><span class="n">undef</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10-element Vector{Float64}:
+ 2.2870031e-314
+ 2.305650118e-314
+ 2.287003298e-314
+ 2.287003377e-314
+ 2.2870034164e-314
+ 2.287003456e-314
+ 2.3056506396e-314
+ 2.287003535e-314
+ 2.2870032583e-314
+ 2.3376373433e-314
+</pre></div>
+</div>
+</div>
+</div>
+<p>Argument <code class="docutils literal notranslate"><span class="pre">undef</span></code> means that nothing particular is assigned to all elements.
+Instead, existing values stored previously in the memory are assigned.</p>
+<p>To create an array of dimensions <span class="math notranslate nohighlight">\(K\times N\times S\times W\)</span> you use
+<code class="docutils literal notranslate"><span class="pre">Array{TYPE}(undef,</span> <span class="pre">K,</span> <span class="pre">N,</span> <span class="pre">S,</span> <span class="pre">W)</span></code>.
+Below an illustrating example:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="kt">Array</span><span class="p">{</span><span class="kt">Int</span><span class="p">}(</span><span class="n">undef</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×3×2×2 Array{Int64, 4}:
+[:, :, 1, 1] =
+ 1  4643474736  2
+ 1  4643474816  4
+
+[:, :, 2, 1] =
+ 4643474896  5  4643475056
+ 4643474976  7  4643475136
+
+[:, :, 1, 2] =
+ 8  4643475216  10
+ 9  4643475296  11
+
+[:, :, 2, 2] =
+ 4643475376  12  4643475536
+ 4643475456  12  4643475616
+</pre></div>
+</div>
+</div>
+</div>
+<p>To get an array with all elements constant, you use command <code class="docutils literal notranslate"><span class="pre">fill</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="n">fill</span><span class="p">(</span><span class="nb">π</span><span class="o">^</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4×3 Matrix{Float64}:
+ 9.8696  9.8696  9.8696
+ 9.8696  9.8696  9.8696
+ 9.8696  9.8696  9.8696
+ 9.8696  9.8696  9.8696
+</pre></div>
+</div>
+</div>
+</div>
+<p>Arrays with zero elements can be constructed with <code class="docutils literal notranslate"><span class="pre">zeros</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">zeros</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3×2 Matrix{Float64}:
+ 0.0  0.0
+ 0.0  0.0
+ 0.0  0.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>To get an identity square matrix of dimension <span class="math notranslate nohighlight">\(K\)</span> function <code class="docutils literal notranslate"><span class="pre">I</span></code> from package <code class="docutils literal notranslate"><span class="pre">LinearAlgebra</span></code> can be used:</p>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>To load package to the memory, you use <code class="docutils literal notranslate"><span class="pre">using</span> <span class="pre">PackageName</span></code>. To install packages you use <code class="docutils literal notranslate"><span class="pre">Pkg</span></code> package:
+<code class="docutils literal notranslate">&#160;&#160;&#160; <span class="pre">using</span> <span class="pre">Pkg;</span> <span class="pre">Pkg.add(&quot;PackageName&quot;)</span>&#160;&#160;&#160; </code></p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">LinearAlgebra</span>
+<span class="nb">I</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5×5 Diagonal{Bool, Vector{Bool}}:
+ 1  ⋅  ⋅  ⋅  ⋅
+ ⋅  1  ⋅  ⋅  ⋅
+ ⋅  ⋅  1  ⋅  ⋅
+ ⋅  ⋅  ⋅  1  ⋅
+ ⋅  ⋅  ⋅  ⋅  1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p><code class="docutils literal notranslate"><span class="pre">I</span></code> generates a matrix with boolean elements (with <code class="docutils literal notranslate"><span class="pre">true</span></code> and <code class="docutils literal notranslate"><span class="pre">false</span></code> values) but it can be used normally with arrays of other numeric types thanks to coercion.</p>
+</div>
+<p>Except square bracket notations, accessing arrays in <code class="docutils literal notranslate"><span class="pre">Julia</span></code> is almost one-to-one analogy to <code class="docutils literal notranslate"><span class="pre">Matlab</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span><span class="p">;</span>
+     <span class="mi">6</span> <span class="mi">7</span> <span class="mi">5</span> <span class="mi">9</span> <span class="mi">12</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×5 Matrix{Int64}:
+ 1  2  3  4   5
+ 6  7  5  9  12
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">size</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 5)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="o">:</span><span class="p">]</span> <span class="c">#1st row</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5-element Vector{Int64}:
+ 1
+ 2
+ 3
+ 4
+ 5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="p">[</span><span class="o">:</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span> <span class="c">#1st column</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2-element Vector{Int64}:
+ 1
+ 6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="p">[</span><span class="o">:</span><span class="p">,[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">]]</span> <span class="c">#1st and 3rd column</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2 Matrix{Int64}:
+ 1  3
+ 6  5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="p">[</span><span class="o">:</span><span class="p">,</span><span class="mi">3</span><span class="o">:</span><span class="k">end</span><span class="p">]</span> <span class="c">#from 3rd to the last columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×3 Matrix{Int64}:
+ 3  4   5
+ 5  9  12
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="o">:</span><span class="k">end</span><span class="p">]</span> <span class="c">#1st row and from 3rd to the last columns</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-element Vector{Int64}:
+ 3
+ 4
+ 5
+</pre></div>
+</div>
+</div>
+</div>
+<p>Just like with scalars, arithmetic operations on arrays of <em>the same dimensions</em> work in an analogous way:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span><span class="p">;</span><span class="mi">3</span> <span class="mi">4</span><span class="p">];</span>
+<span class="n">B</span> <span class="o">=</span> <span class="nb">I</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">+</span> <span class="n">B</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2 Matrix{Int64}:
+ 2  2
+ 3  5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">*</span><span class="n">A</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2 Matrix{Int64}:
+  7  10
+ 15  22
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2 Matrix{Int64}:
+ 1  2
+ 3  4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">&#39;</span> <span class="c">#transposition</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2 adjoint(::Matrix{Int64}) with eltype Int64:
+ 1  3
+ 2  4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="c">#invert matrix</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2 Matrix{Float64}:
+ -2.0   1.0
+  1.5  -0.5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span><span class="o">^</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">*</span><span class="n">A</span> <span class="c">#in fact, it works</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2 Matrix{Float64}:
+ 1.0          0.0
+ 2.22045e-16  1.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nonetheless, if we try to add an object of different dimensions (including scalars),
+we will get an error message, just like in an example below:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">+</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">MethodError</span>: no method matching +(::Matrix{Int64}, ::Int64)
+<span class="n">For</span> <span class="n">element</span><span class="o">-</span><span class="n">wise</span> <span class="n">addition</span><span class="p">,</span> <span class="n">use</span> <span class="n">broadcasting</span> <span class="k">with</span> <span class="n">dot</span> <span class="n">syntax</span><span class="p">:</span> <span class="n">array</span> <span class="o">.+</span> <span class="n">scalar</span>
+<span class="n">Closest</span> <span class="n">candidates</span> <span class="n">are</span><span class="p">:</span>
+  <span class="o">+</span><span class="p">(::</span><span class="n">Any</span><span class="p">,</span> <span class="p">::</span><span class="n">Any</span><span class="p">,</span> <span class="p">::</span><span class="n">Any</span><span class="p">,</span> <span class="p">::</span><span class="n">Any</span><span class="o">...</span><span class="p">)</span> <span class="n">at</span> <span class="n">operators</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">560</span>
+  <span class="o">+</span><span class="p">(::</span><span class="n">T</span><span class="p">,</span> <span class="p">::</span><span class="n">T</span><span class="p">)</span> <span class="n">where</span> <span class="n">T</span><span class="o">&lt;</span><span class="p">:</span><span class="n">Union</span><span class="p">{</span><span class="n">Int128</span><span class="p">,</span> <span class="n">Int16</span><span class="p">,</span> <span class="n">Int32</span><span class="p">,</span> <span class="n">Int64</span><span class="p">,</span> <span class="n">Int8</span><span class="p">,</span> <span class="n">UInt128</span><span class="p">,</span> <span class="n">UInt16</span><span class="p">,</span> <span class="n">UInt32</span><span class="p">,</span> <span class="n">UInt64</span><span class="p">,</span> <span class="n">UInt8</span><span class="p">}</span> <span class="n">at</span> <span class="nb">int</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">87</span>
+  <span class="o">+</span><span class="p">(::</span><span class="n">Rational</span><span class="p">,</span> <span class="p">::</span><span class="n">Integer</span><span class="p">)</span> <span class="n">at</span> <span class="n">rational</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">288</span>
+  <span class="o">...</span>
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">219</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1094</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>This can be perceived as a particularly bizzare and excessively formal thing.
+That said, at the development stage there were reasons for this.
+Furthermore, notice that in Mathematics this type of operations, <span class="math notranslate nohighlight">\(\mathbb{A}+1\)</span>, in most cases is also forbidden.
+One (extremely inefficient but didactically useful) solution to this problem is to increase the size of the smaller object by using <code class="docutils literal notranslate"><span class="pre">repeat</span></code>.
+This function constructs an array by repeating the input <em>array</em> a given number of times in each out of the provided dimension.</p>
+<p>Thus, to compute <span class="math notranslate nohighlight">\(\mathbb{A}+1,\)</span> we have to increase the size of <span class="math notranslate nohighlight">\(1\)</span> in such a way that the new object fits the size of <span class="math notranslate nohighlight">\(\mathbb{A}\)</span>.
+As we remember the size of <span class="math notranslate nohighlight">\(\mathbb{A}\)</span> is <span class="math notranslate nohighlight">\(2\times 2.\)</span>
+Just to double check, let’s use function <code class="docutils literal notranslate"><span class="pre">size</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">size</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 2)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>The first argument of <code class="docutils literal notranslate"><span class="pre">repeat</span></code> is the input array (note that we need to write the array form <code class="docutils literal notranslate"><span class="pre">[1]</span></code> fort this reason that a scalar object <code class="docutils literal notranslate"><span class="pre">1</span></code> is not accepted by the function), next arguments are how many times in each dimension the object should be repeated.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Below</span> <span class="n">you</span> <span class="n">can</span> <span class="n">find</span> <span class="sb">`repeat`</span> <span class="n">at</span> <span class="n">play</span><span class="o">:</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">repeat</span><span class="p">([</span><span class="mi">1</span><span class="p">],</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-element Vector{Int64}:
+ 1
+ 1
+ 1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">repeat</span><span class="p">([</span><span class="mi">1</span><span class="p">],</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3×2 Matrix{Int64}:
+ 1  1
+ 1  1
+ 1  1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">repeat</span><span class="p">([</span><span class="mi">1</span><span class="p">],</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4×3×2 Array{Int64, 3}:
+[:, :, 1] =
+ 1  1  1
+ 1  1  1
+ 1  1  1
+ 1  1  1
+
+[:, :, 2] =
+ 1  1  1
+ 1  1  1
+ 1  1  1
+ 1  1  1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">repeat</span><span class="p">([</span><span class="mi">1</span><span class="p">;</span> <span class="mi">2</span><span class="p">],</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c">#input argument: column vector</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4×3 Matrix{Int64}:
+ 1  1  1
+ 2  2  2
+ 1  1  1
+ 2  2  2
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">repeat</span><span class="p">([</span><span class="mi">1</span> <span class="mi">2</span><span class="p">],</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="c">#input argument: row vector</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×6 Matrix{Int64}:
+ 1  2  1  2  1  2
+ 1  2  1  2  1  2
+</pre></div>
+</div>
+</div>
+</div>
+<p>Consequently, we are in the position to compute <span class="math notranslate nohighlight">\(\mathbb{A}+1:\)</span></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">+</span> <span class="n">repeat</span><span class="p">([</span><span class="mi">1</span><span class="p">],</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2 Matrix{Int64}:
+ 2  3
+ 4  5
+</pre></div>
+</div>
+</div>
+</div>
+<p>An addition of two arrays of different sizes can be conducted analogously:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> <span class="o">+</span> <span class="n">repeat</span><span class="p">([</span><span class="mi">0</span><span class="p">;</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2 Matrix{Int64}:
+ 1  2
+ 4  5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>That being said, by no means use this approach in your daily use.
+A <em>much more recommended</em> and <strong>efficient</strong> way to operate on objects of different sizes is to use broadcasting or mapping.
+I discuss it in more details in <a class="reference internal" href="broadcasting.html#broadcasting"><span class="std std-ref">one of the further secions</span></a>.</p>
+</div>
+<div class="section" id="assignment-operator-and-arrays-easy-for-pythonistas-confusing-for-matlabians">
+<h4>Assignment operator (<code class="docutils literal notranslate"><span class="pre">=</span></code>) and arrays: easy for Pythonistas, confusing for Matlabians<a class="headerlink" href="#assignment-operator-and-arrays-easy-for-pythonistas-confusing-for-matlabians" title="Permalink to this headline">¶</a></h4>
+<p>What can be quite confusing at first for people with the <code class="docutils literal notranslate"><span class="pre">Matlab</span></code> background is how the assignment operator (<code class="docutils literal notranslate"><span class="pre">=</span></code>) works with arrays in <code class="docutils literal notranslate"><span class="pre">Julia</span></code>.
+In <code class="docutils literal notranslate"><span class="pre">Matlab</span></code> if we want to create a matrix <code class="docutils literal notranslate"><span class="pre">V1</span></code> that is a copy of another matrix <code class="docutils literal notranslate"><span class="pre">V0</span></code> it is enough to write:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>    <span class="n">V1</span><span class="o">=</span><span class="n">V0</span>
+</pre></div>
+</div>
+<p>Henceforth, there are two <em>separate</em> matrices in the memory, <code class="docutils literal notranslate"><span class="pre">V1</span></code> and <code class="docutils literal notranslate"><span class="pre">V0</span></code>.
+Any changes in either of those will not affect the other one.
+In <code class="docutils literal notranslate"><span class="pre">Julia</span></code> this works in a very different way.
+Exactly like in <code class="docutils literal notranslate"><span class="pre">Python</span></code>, running <code class="docutils literal notranslate"><span class="pre">V1=V0</span></code> will create a new <em>pointer</em> to the memory allocated for <code class="docutils literal notranslate"><span class="pre">V0</span></code>.
+Both objects, <code class="docutils literal notranslate"><span class="pre">V1</span></code> and <code class="docutils literal notranslate"><span class="pre">V0</span></code>, share the same information.
+Consequently, any changes in the memory through accessing <code class="docutils literal notranslate"><span class="pre">V1</span></code> will affect the data pointed by <code class="docutils literal notranslate"><span class="pre">V0</span></code>, and vice versa.
+Below you can find an illustration of this language feature.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span> <span class="n">V₀</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">];</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>V₀ = [1 2 3] = [1 2 3]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span> <span class="n">V₁</span> <span class="o">=</span> <span class="n">V₀</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>V₁ = V₀ = [1 2 3]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Running <code class="docutils literal notranslate"><span class="pre">V₁</span> <span class="pre">=</span> <span class="pre">V₀</span></code> will create a new pointer to the memory associated with <code class="docutils literal notranslate"><span class="pre">V₀</span></code>.
+Now changes in either of those objects will affect both pointers:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span> <span class="n">V₁</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">420</span><span class="p">;</span>
+<span class="nd">@show</span> <span class="n">V₁</span><span class="p">;</span>
+<span class="nd">@show</span> <span class="n">V₀</span><span class="p">;</span>
+
+<span class="nd">@show</span> <span class="n">V₀</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">128</span><span class="p">;</span>
+<span class="nd">@show</span> <span class="n">V₁</span><span class="p">;</span>
+<span class="nd">@show</span> <span class="n">V₀</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>V₁[1] = 420 = 420
+V₁ = [420 2 128]
+V₀ = [420 2 128]
+V₀[3] = 128 = 128
+V₁ = [420 2 128]
+V₀ = [420 2 128]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p><em>Note to myself:</em> explain it using better words.</p>
+</div>
+<p>This feature of <code class="docutils literal notranslate"><span class="pre">Julia</span></code> can be especially confusing in iterative procedures with updating values, such as value function iterations.
+In this case, trying to create a copy of one array but making rather a new pointer instead will result in meeting the convergence criterion immediately after the first iteration (<em>terrible sentence</em>).
+Obviously, this will not be correct.</p>
+<p>A remedy to this issue can be simply addressed by using <code class="docutils literal notranslate"><span class="pre">deepcopy</span></code>, which creates a <em>new object in the memory</em> that contains the same information as the copied object.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span> <span class="n">V₀</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">];</span>
+<span class="nd">@show</span> <span class="n">V₁</span> <span class="o">=</span> <span class="n">deepcopy</span><span class="p">(</span><span class="n">V₀</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>V₀ = [1 2 3] = [1 2 3]
+V₁ = deepcopy(V₀) = [1 2 3]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Now changes in either of those objects <em>will not</em> affect values pointed by the other object:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span> <span class="n">V₁</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">420</span><span class="p">;</span>
+<span class="nd">@show</span> <span class="n">V₁</span><span class="p">;</span>
+<span class="nd">@show</span> <span class="n">V₀</span><span class="p">;</span>
+
+<span class="nd">@show</span> <span class="n">V₀</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">128</span><span class="p">;</span>
+<span class="nd">@show</span> <span class="n">V₁</span><span class="p">;</span>
+<span class="nd">@show</span> <span class="n">V₀</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>V₁[1] = 420 = 420
+V₁ = [420 2 3]
+V₀ = [1 2 3]
+V₀[3] = 128 = 128
+V₁ = [420 2 3]
+V₀ = [1 2 128]
+</pre></div>
+</div>
+</div>
+</div>
+<p>An important thing that should be also stressed is that this feature works only in the presence of assignments without additional operations.
+If, for instance, code <code class="docutils literal notranslate"><span class="pre">V₁</span> <span class="pre">=</span> <span class="pre">2*V₀</span></code> involves two operations: (1) multiplication <code class="docutils literal notranslate"><span class="pre">*(2,V₀)</span></code>; and (2) making pointer <code class="docutils literal notranslate"><span class="pre">V₁</span></code> to memory containing <em>results</em> from computing <code class="docutils literal notranslate"><span class="pre">*(2,V₀)</span></code> in the past.
+This means that memory spaces pointed by <code class="docutils literal notranslate"><span class="pre">V₁</span></code> and by <code class="docutils literal notranslate"><span class="pre">V₀</span></code> are two different things.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span> <span class="n">V₀</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">];</span>
+<span class="nd">@show</span> <span class="n">V₁</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">V₀</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>V₀ = [1 2 3] = [1 2 3]
+V₁ = 2V₀ = [2 4 6]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span> <span class="n">V₁</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">420</span><span class="p">;</span>
+<span class="nd">@show</span> <span class="n">V₁</span><span class="p">;</span>
+<span class="nd">@show</span> <span class="n">V₀</span><span class="p">;</span>
+
+<span class="nd">@show</span> <span class="n">V₀</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="mi">128</span><span class="p">;</span>
+<span class="nd">@show</span> <span class="n">V₁</span><span class="p">;</span>
+<span class="nd">@show</span> <span class="n">V₀</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>V₁[1] = 420 = 420
+V₁ = [420 4 6]
+V₀ = [1 2 3]
+V₀[3] = 128 = 128
+V₁ = [420 4 6]
+V₀ = [1 2 128]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="dictionaries">
+<h3>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h3>
+<p>Dictionaries are very useful objects that are particularly useful in my daily workflow.
+They are</p>
+</div>
+<div class="section" id="ranges">
+<h3>Ranges<a class="headerlink" href="#ranges" title="Permalink to this headline">¶</a></h3>
+<p>Ranges are quite intuitive objects.
+They collect elements from a certain range of values.
+They can be created either by using <code class="docutils literal notranslate"><span class="pre">:</span></code> operator (just like in <code class="docutils literal notranslate"><span class="pre">R</span></code> and <code class="docutils literal notranslate"><span class="pre">Matlab</span></code>) or by using <code class="docutils literal notranslate"><span class="pre">range</span></code> function.
+For instance, if we want to create a range from 5 through 120, we can use two options:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span> <span class="mi">5</span><span class="o">:</span><span class="mi">120</span><span class="p">;</span>
+<span class="nd">@show</span> <span class="n">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">120</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5:120 = 5:120
+range(5, stop = 120) = 5:120
+</pre></div>
+</div>
+</div>
+</div>
+<p>Notice that you are not allowed to use <code class="docutils literal notranslate"><span class="pre">range(5,120)</span></code> because at least one of <code class="docutils literal notranslate"><span class="pre">length</span></code>, <code class="docutils literal notranslate"><span class="pre">stop</span></code>, or <code class="docutils literal notranslate"><span class="pre">step</span></code> must be specified explicitely.</p>
+<p>If we want, we can set the size step. Again, it can be done in two ways:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span> <span class="mi">5</span><span class="o">:.</span><span class="mi">5</span><span class="o">:</span><span class="mi">120</span><span class="p">;</span>
+<span class="nd">@show</span> <span class="n">range</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">120</span><span class="p">,</span> <span class="n">step</span><span class="o">=.</span><span class="mi">5</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>5:0.5:120 = 5.0:0.5:120.0
+range(5, stop = 120, step = 0.5) = 5.0:0.5:120.0
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can perform normal arithmetic operations:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">1</span><span class="o">:</span><span class="mi">5</span><span class="p">)</span><span class="o">*</span><span class="mi">2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2:2:10
+</pre></div>
+</div>
+</div>
+</div>
+<p>However, be careful about the order of operations.
+Arithmetic operations have a higher priority in <code class="docutils literal notranslate"><span class="pre">Julia</span></code>.
+For <code class="docutils literal notranslate"><span class="pre">Matlab</span></code> users that is the same, but it might be problematic for <code class="docutils literal notranslate"><span class="pre">R</span></code> users, where the order is different.
+In <code class="docutils literal notranslate"><span class="pre">Julia</span></code>if you type <code class="docutils literal notranslate"><span class="pre">1:5+1</span></code>, you will give you <code class="docutils literal notranslate"><span class="pre">1:6</span></code>, while in <code class="docutils literal notranslate"><span class="pre">R</span></code> you will get <code class="docutils literal notranslate"><span class="pre">2:6</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">:</span><span class="mi">5</span><span class="o">+</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1:6
+</pre></div>
+</div>
+</div>
+</div>
+<p>Another important difference between other languages and <code class="docutils literal notranslate"><span class="pre">Julia</span></code> is the fact that arrays and ranges are not compatible with each other.
+This means that arithmetic operations will give you an error message, even if objects are of the same size:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span><span class="o">:</span><span class="mi">3</span> <span class="o">+</span> <span class="p">[</span><span class="mi">1</span><span class="p">;</span> <span class="mi">2</span><span class="p">;</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">MethodError</span>: no method matching +(::Int64, ::Vector{Int64})
+<span class="n">For</span> <span class="n">element</span><span class="o">-</span><span class="n">wise</span> <span class="n">addition</span><span class="p">,</span> <span class="n">use</span> <span class="n">broadcasting</span> <span class="k">with</span> <span class="n">dot</span> <span class="n">syntax</span><span class="p">:</span> <span class="n">scalar</span> <span class="o">.+</span> <span class="n">array</span>
+<span class="n">Closest</span> <span class="n">candidates</span> <span class="n">are</span><span class="p">:</span>
+  <span class="o">+</span><span class="p">(::</span><span class="n">Any</span><span class="p">,</span> <span class="p">::</span><span class="n">Any</span><span class="p">,</span> <span class="p">::</span><span class="n">Any</span><span class="p">,</span> <span class="p">::</span><span class="n">Any</span><span class="o">...</span><span class="p">)</span> <span class="n">at</span> <span class="n">operators</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">560</span>
+  <span class="o">+</span><span class="p">(::</span><span class="n">T</span><span class="p">,</span> <span class="p">::</span><span class="n">T</span><span class="p">)</span> <span class="n">where</span> <span class="n">T</span><span class="o">&lt;</span><span class="p">:</span><span class="n">Union</span><span class="p">{</span><span class="n">Int128</span><span class="p">,</span> <span class="n">Int16</span><span class="p">,</span> <span class="n">Int32</span><span class="p">,</span> <span class="n">Int64</span><span class="p">,</span> <span class="n">Int8</span><span class="p">,</span> <span class="n">UInt128</span><span class="p">,</span> <span class="n">UInt16</span><span class="p">,</span> <span class="n">UInt32</span><span class="p">,</span> <span class="n">UInt64</span><span class="p">,</span> <span class="n">UInt8</span><span class="p">}</span> <span class="n">at</span> <span class="nb">int</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">87</span>
+  <span class="o">+</span><span class="p">(::</span><span class="n">Union</span><span class="p">{</span><span class="n">Int16</span><span class="p">,</span> <span class="n">Int32</span><span class="p">,</span> <span class="n">Int64</span><span class="p">,</span> <span class="n">Int8</span><span class="p">},</span> <span class="p">::</span><span class="n">BigInt</span><span class="p">)</span> <span class="n">at</span> <span class="n">gmp</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">534</span>
+  <span class="o">...</span>
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">293</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1094</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can extract all element from a range and create an array by using <code class="docutils literal notranslate"><span class="pre">collect</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">collect</span><span class="p">(</span><span class="mi">1</span><span class="o">:</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-element Vector{Int64}:
+ 1
+ 2
+ 3
+</pre></div>
+</div>
+</div>
+</div>
+<p>In this case, arithmetic operations are allowed:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">collect</span><span class="p">(</span><span class="mi">1</span><span class="o">:</span><span class="mi">3</span><span class="p">)</span> <span class="o">+</span> <span class="p">[</span><span class="mi">1</span><span class="p">;</span> <span class="mi">2</span><span class="p">;</span> <span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-element Vector{Int64}:
+ 2
+ 4
+ 6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">FIGlet</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">random_economist</span><span class="p">()</span>
+    <span class="k">using</span> <span class="n">sample</span>
+<span class="n">enddddd</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> _____ _              _     _                  _   _ _
+/  ___| |            (_)   | |                | | | | |
+\ `--.| |_ __ _ _ __  _ ___| | __ ___      __ | | | | | __ _ _ __ ___
+ `--. \ __/ _` | &#39;_ \| / __| |/ _` \ \ /\ / / | | | | |/ _` | &#39;_ ` _ \
+/\__/ / || (_| | | | | \__ \ | (_| |\ V  V /  | |_| | | (_| | | | | | |
+\____/ \__\__,_|_| |_|_|___/_|\__,_| \_/\_/    \___/|_|\__,_|_| |_| |_|
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">Σ</span><span class="p">([</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>6
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="tuples">
+<h3>Tuples<a class="headerlink" href="#tuples" title="Permalink to this headline">¶</a></h3>
+<p>To be written. An example of a tuple:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1, 2, 3)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="broadcasting-where-arrays-meet-scalars">
+<span id="broadcasting"></span><h2>Broadcasting (<code class="docutils literal notranslate"><span class="pre">.</span></code>): where arrays meet scalars<a class="headerlink" href="#broadcasting-where-arrays-meet-scalars" title="Permalink to this headline">¶</a></h2>
+<p>In <a class="reference internal" href="data_structures.html#arrays"><span class="std std-ref">the section</span></a> describing arrays, we faced one seemingly bizzare obstacle in operating with objects of different data structures.
+In our discussed example we tried to add a scalar number, <span class="math notranslate nohighlight">\(1,\)</span> to a matrix <span class="math notranslate nohighlight">\(\mathbb{A}\)</span> by running <span class="math notranslate nohighlight">\(\mathbb{A}+1.\)</span>
+In <code class="docutils literal notranslate"><span class="pre">Julia</span></code> it is not possible.
+While trying running <code class="docutils literal notranslate"><span class="pre">A+1</span></code> you get an error message.
+We addressed this problem by using function <code class="docutils literal notranslate"><span class="pre">repeat</span></code>.
+Here I present a much more recommended approach and to this end I will use function <code class="docutils literal notranslate"><span class="pre">broadcast</span></code>.</p>
+<p>To perform this type of procedures, you have to broadcast an addition operator <code class="docutils literal notranslate"><span class="pre">+</span></code>.
+Broadcasting functions allows to carry out elementwise operations on objects of different sizes.
+The procedure involves increasing the size of the smaller object in such a way that both have the same size.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">A</span> 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2 Matrix{Int64}:
+ 1  2
+ 3  4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">broadcast</span><span class="p">(</span><span class="o">+</span><span class="p">,</span> <span class="n">A</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2 Matrix{Int64}:
+ 2  3
+ 4  5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="o">?</span><span class="n">broadcast</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>search: <span class=" -Color -Color-Bold">broadcast</span> <span class=" -Color -Color-Bold">broadcast</span>! <span class=" -Color -Color-Bold">Broadcast</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">broadcast</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">As</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Broadcast the function <code class="docutils literal notranslate"><span class="pre">f</span></code> over the arrays, tuples, collections, <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">Ref</span></code></span>s and/or scalars <code class="docutils literal notranslate"><span class="pre">As</span></code>.</p>
+<p>Broadcasting applies the function <code class="docutils literal notranslate"><span class="pre">f</span></code> over the elements of the container arguments and the scalars themselves in <code class="docutils literal notranslate"><span class="pre">As</span></code>. Singleton and missing dimensions are expanded to match the extents of the other arguments by virtually repeating the value. By default, only a limited number of types are considered scalars, including <code class="docutils literal notranslate"><span class="pre">Number</span></code>s, <code class="docutils literal notranslate"><span class="pre">String</span></code>s, <code class="docutils literal notranslate"><span class="pre">Symbol</span></code>s, <code class="docutils literal notranslate"><span class="pre">Type</span></code>s, <code class="docutils literal notranslate"><span class="pre">Function</span></code>s and some common singletons like <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">missing</span></code></span> and <span class="xref myst"><code class="docutils literal notranslate"><span class="pre">nothing</span></code></span>. All other arguments are iterated over or indexed into elementwise.</p>
+<p>The resulting container type is established by the following rules:</p>
+<ul class="simple">
+<li><p>If all the arguments are scalars or zero-dimensional arrays, it returns an unwrapped scalar.</p></li>
+<li><p>If at least one argument is a tuple and all others are scalars or zero-dimensional arrays, it returns a tuple.</p></li>
+<li><p>All other combinations of arguments default to returning an <code class="docutils literal notranslate"><span class="pre">Array</span></code>, but custom container types can define their own implementation and promotion-like rules to customize the result when they appear as arguments.</p></li>
+</ul>
+<p>A special syntax exists for broadcasting: <code class="docutils literal notranslate"><span class="pre">f.(args...)</span></code> is equivalent to <code class="docutils literal notranslate"><span class="pre">broadcast(f,</span> <span class="pre">args...)</span></code>, and nested <code class="docutils literal notranslate"><span class="pre">f.(g.(args...))</span></code> calls are fused into a single broadcast loop.</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">repeat</span><span class="p">(</span><span class="n">collect</span><span class="p">(</span><span class="mi">1</span><span class="o">:</span><span class="mi">100</span><span class="p">),</span> <span class="mi">1000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">);</span>
+<span class="nd">@show</span> <span class="n">size</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>size(X) = (100000, 10000)
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(100000, 10000)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>In addition to running the line of code, thanks to macro <code class="docutils literal notranslate"><span class="pre">&#64;time</span></code> at the beginning of the line the execution time is returned.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@time</span> <span class="n">X</span> <span class="o">.+</span> <span class="mi">1</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  8.262623 seconds (4 allocations: 7.451 GiB, 0.93% gc time)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="kt">Pipe</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">exp</span><span class="o">.</span><span class="p">(</span> <span class="n">collect</span><span class="p">(</span> <span class="n">range</span><span class="p">(</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">stop</span><span class="o">=</span><span class="n">log</span><span class="p">(</span><span class="mi">42</span><span class="p">),</span> <span class="n">length</span><span class="o">=</span><span class="mi">73</span><span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>73-element Vector{Float64}:
+  1.0
+  1.0532831317160591
+  1.1094053555575891
+  1.1685179472442655
+  1.2307802429398609
+  1.2963600687379486
+  1.3654341930319522
+  1.4381888029888847
+  1.5148200064111028
+  1.5955343603388272
+  1.6805494278182591
+  1.7700943643360474
+  1.8644105355008187
+  ⋮
+ 23.727548568154436
+ 24.991826663810592
+ 26.323469455763327
+ 27.726066345998433
+ 29.203397991080454
+ 30.7594464927957
+ 32.3984061317844
+ 34.12469467309464
+ 35.94296527413145
+ 37.85811902709873
+ 39.87531816974189
+ 42.00000000000001
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@pipe</span> <span class="n">range</span><span class="p">(</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">stop</span><span class="o">=</span><span class="n">log</span><span class="p">(</span><span class="mi">42</span><span class="p">),</span> <span class="n">length</span><span class="o">=</span><span class="mi">73</span><span class="p">)</span> <span class="o">|&gt;</span> <span class="n">collect</span> <span class="o">|&gt;</span> <span class="n">exp</span><span class="o">.</span><span class="p">(</span><span class="n">_</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>73-element Vector{Float64}:
+  1.0
+  1.0532831317160591
+  1.1094053555575891
+  1.1685179472442655
+  1.2307802429398609
+  1.2963600687379486
+  1.3654341930319522
+  1.4381888029888847
+  1.5148200064111028
+  1.5955343603388272
+  1.6805494278182591
+  1.7700943643360474
+  1.8644105355008187
+  ⋮
+ 23.727548568154436
+ 24.991826663810592
+ 26.323469455763327
+ 27.726066345998433
+ 29.203397991080454
+ 30.7594464927957
+ 32.3984061317844
+ 34.12469467309464
+ 35.94296527413145
+ 37.85811902709873
+ 39.87531816974189
+ 42.00000000000001
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">exp</span><span class="o">.</span><span class="p">([</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1×3 Matrix{Float64}:
+ 2.71828  7.38906  20.0855
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">broadcast</span><span class="p">(</span><span class="n">exp</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1×3 Matrix{Float64}:
+ 2.71828  7.38906  20.0855
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@time</span> <span class="n">X</span> <span class="o">+</span> <span class="n">repeat</span><span class="p">([</span><span class="mi">1</span><span class="p">],</span> <span class="mi">100000</span><span class="p">,</span> <span class="mi">10000</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> 29.899487 seconds (7 allocations: 14.901 GiB, 0.27% gc time)
+</pre></div>
+</div>
+</div>
+</div>
+<p>We see that the broadcasted function is more than three times faster in the presented example.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">repeat</span><span class="p">(</span><span class="n">A</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4×2 Matrix{Int64}:
+ 1  2
+ 3  4
+ 1  2
+ 3  4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="o">?+</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>search: <span class=" -Color -Color-Bold">+</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="o">...</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Addition operator. <code class="docutils literal notranslate"><span class="pre">x+y+z+...</span></code> calls this function with all arguments, i.e. <code class="docutils literal notranslate"><span class="pre">+(x,</span> <span class="pre">y,</span> <span class="pre">z,</span> <span class="pre">...)</span></code>.</p>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@show</span> <span class="n">broadcast</span><span class="p">(</span><span class="o">+</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span><span class="p">;</span><span class="mi">3</span> <span class="mi">4</span><span class="p">])</span>
+
+<span class="nd">@show</span> <span class="n">broadcast</span><span class="p">(</span><span class="o">+</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span><span class="p">;</span><span class="mi">3</span> <span class="mi">4</span><span class="p">])</span>
+
+
+<span class="c"># @show broadcast(+, [1 2 3], [1 2;3 4])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>broadcast(+, 1, [1 2; 3 4]) = [2 3; 4 5]
+broadcast(+, [0 1], [1 2; 3 4]) = [1 3; 3 5]
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2 Matrix{Int64}:
+ 1  3
+ 3  5
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="o">.//</span><span class="p">(</span> <span class="mi">1</span><span class="p">,</span> <span class="p">[</span><span class="mi">1</span> <span class="mi">2</span><span class="p">;</span><span class="mi">3</span> <span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×2 Matrix{Rational{Int64}}:
+ 1//1  1//2
+ 1//3  1//4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mi">1</span> <span class="mi">2</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">MethodError</span>: no method matching +(::Matrix{Int64}, ::Int64)
+<span class="n">For</span> <span class="n">element</span><span class="o">-</span><span class="n">wise</span> <span class="n">addition</span><span class="p">,</span> <span class="n">use</span> <span class="n">broadcasting</span> <span class="k">with</span> <span class="n">dot</span> <span class="n">syntax</span><span class="p">:</span> <span class="n">array</span> <span class="o">.+</span> <span class="n">scalar</span>
+<span class="n">Closest</span> <span class="n">candidates</span> <span class="n">are</span><span class="p">:</span>
+  <span class="o">+</span><span class="p">(::</span><span class="n">Any</span><span class="p">,</span> <span class="p">::</span><span class="n">Any</span><span class="p">,</span> <span class="p">::</span><span class="n">Any</span><span class="p">,</span> <span class="p">::</span><span class="n">Any</span><span class="o">...</span><span class="p">)</span> <span class="n">at</span> <span class="n">operators</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">560</span>
+  <span class="o">+</span><span class="p">(::</span><span class="n">T</span><span class="p">,</span> <span class="p">::</span><span class="n">T</span><span class="p">)</span> <span class="n">where</span> <span class="n">T</span><span class="o">&lt;</span><span class="p">:</span><span class="n">Union</span><span class="p">{</span><span class="n">Int128</span><span class="p">,</span> <span class="n">Int16</span><span class="p">,</span> <span class="n">Int32</span><span class="p">,</span> <span class="n">Int64</span><span class="p">,</span> <span class="n">Int8</span><span class="p">,</span> <span class="n">UInt128</span><span class="p">,</span> <span class="n">UInt16</span><span class="p">,</span> <span class="n">UInt32</span><span class="p">,</span> <span class="n">UInt64</span><span class="p">,</span> <span class="n">UInt8</span><span class="p">}</span> <span class="n">at</span> <span class="nb">int</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">87</span>
+  <span class="o">+</span><span class="p">(::</span><span class="n">Rational</span><span class="p">,</span> <span class="p">::</span><span class="n">Integer</span><span class="p">)</span> <span class="n">at</span> <span class="n">rational</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">288</span>
+  <span class="o">...</span>
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">382</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1094</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">mean</span><span class="o">.</span><span class="p">([</span><span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1×3 Matrix{Float64}:
+ 1.0  2.0  3.0
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>map and broadcasting</p></li>
+<li><p>dictionaries</p></li>
+<li><p>ranges</p></li>
+<li><p>functions</p></li>
+<li><p>for loops: many iterators, break, continue</p></li>
+<li><p>control flows: if ?:</p></li>
+<li><p>broadcasting exisitng functions</p></li>
+<li><p>anonymous functions</p></li>
+<li><p>plots</p></li>
+<li><p>DataFrames</p></li>
+<li><p>Pipes</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">StatsBase</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">countmap</span><span class="p">([</span><span class="mi">2</span><span class="p">;</span> <span class="mi">2</span><span class="p">;</span> <span class="mi">3</span><span class="p">;</span> <span class="mi">4</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dict{Int64, Int64} with 3 entries:
+  4 =&gt; 1
+  2 =&gt; 2
+  3 =&gt; 1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="o">?</span><span class="n">countmap</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>search: <span class=" -Color -Color-Bold">countmap</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">countmap</span><span class="p">(</span><span class="n">x</span><span class="p">;</span> <span class="n">alg</span> <span class="o">=</span> <span class="p">:</span><span class="n">auto</span><span class="p">)</span>
+<span class="n">countmap</span><span class="p">(</span><span class="n">x</span><span class="p">::</span><span class="n">AbstractVector</span><span class="p">,</span> <span class="n">w</span><span class="p">::</span><span class="n">AbstractVector</span><span class="p">{</span><span class="o">&lt;</span><span class="p">:</span><span class="n">Real</span><span class="p">};</span> <span class="n">alg</span> <span class="o">=</span> <span class="p">:</span><span class="n">auto</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Return a dictionary mapping each unique value in <code class="docutils literal notranslate"><span class="pre">x</span></code> to its number of occurrences. A vector of weights <code class="docutils literal notranslate"><span class="pre">w</span></code> can be provided when <code class="docutils literal notranslate"><span class="pre">x</span></code> is a vector.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:auto</span></code> (default): if <code class="docutils literal notranslate"><span class="pre">StatsBase.radixsort_safe(eltype(x))</span> <span class="pre">==</span> <span class="pre">true</span></code> then use                    <code class="docutils literal notranslate"><span class="pre">:radixsort</span></code>, otherwise use <code class="docutils literal notranslate"><span class="pre">:dict</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:radixsort</span></code>:      if <code class="docutils literal notranslate"><span class="pre">radixsort_safe(eltype(x))</span> <span class="pre">==</span> <span class="pre">true</span></code> then use the                    <a class="reference external" href="https://en.wikipedia.org/wiki/Radix_sort">radix sort</a>                    algorithm to sort the input vector which will generally lead to                    shorter running time. However the radix sort algorithm creates a                    copy of the input vector and hence uses more RAM. Choose <code class="docutils literal notranslate"><span class="pre">:dict</span></code>                    if the amount of available RAM is a limitation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:dict</span></code>:           use <code class="docutils literal notranslate"><span class="pre">Dict</span></code>-based method which is generally slower but uses less                    RAM and is safe for any data type.</p></li>
+</ul>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">counts</span><span class="p">([</span><span class="mf">1.5</span> <span class="mf">1.5</span> <span class="mi">3</span> <span class="mi">100</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">MethodError</span>: no method matching counts(::Matrix{Float64})
+<span class="n">Closest</span> <span class="n">candidates</span> <span class="n">are</span><span class="p">:</span>
+  <span class="n">counts</span><span class="p">(::</span><span class="n">AbstractArray</span><span class="p">{</span><span class="n">T</span><span class="p">,</span> <span class="n">N</span><span class="p">}</span> <span class="n">where</span> <span class="p">{</span><span class="n">T</span><span class="o">&lt;</span><span class="p">:</span><span class="n">Integer</span><span class="p">,</span> <span class="n">N</span><span class="p">})</span> <span class="n">at</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">pytka</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">StatsBase</span><span class="o">/</span><span class="n">XT7PT</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">counts</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">85</span>
+  <span class="n">counts</span><span class="p">(::</span><span class="n">AbstractArray</span><span class="p">{</span><span class="n">T</span><span class="p">,</span> <span class="n">N</span><span class="p">}</span> <span class="n">where</span> <span class="p">{</span><span class="n">T</span><span class="o">&lt;</span><span class="p">:</span><span class="n">Integer</span><span class="p">,</span> <span class="n">N</span><span class="p">},</span> <span class="p">::</span><span class="n">UnitRange</span><span class="p">{</span><span class="n">T</span><span class="p">}</span> <span class="n">where</span> <span class="n">T</span><span class="o">&lt;</span><span class="p">:</span><span class="n">Integer</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">pytka</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">StatsBase</span><span class="o">/</span><span class="n">XT7PT</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">counts</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">79</span>
+  <span class="n">counts</span><span class="p">(::</span><span class="n">AbstractArray</span><span class="p">{</span><span class="n">T</span><span class="p">,</span> <span class="n">N</span><span class="p">}</span> <span class="n">where</span> <span class="p">{</span><span class="n">T</span><span class="o">&lt;</span><span class="p">:</span><span class="n">Integer</span><span class="p">,</span> <span class="n">N</span><span class="p">},</span> <span class="p">::</span><span class="n">UnitRange</span><span class="p">{</span><span class="n">T</span><span class="p">}</span> <span class="n">where</span> <span class="n">T</span><span class="o">&lt;</span><span class="p">:</span><span class="n">Integer</span><span class="p">,</span> <span class="p">::</span><span class="n">AbstractWeights</span><span class="p">)</span> <span class="n">at</span> <span class="o">/</span><span class="n">Users</span><span class="o">/</span><span class="n">pytka</span><span class="o">/.</span><span class="n">julia</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">StatsBase</span><span class="o">/</span><span class="n">XT7PT</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">counts</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">81</span>
+  <span class="o">...</span>
+
+<span class="ne">Stacktrace</span>:
+ <span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">top</span><span class="o">-</span><span class="n">level</span> <span class="n">scope</span>
+   <span class="o">@</span> <span class="n">In</span><span class="p">[</span><span class="mi">235</span><span class="p">]:</span><span class="mi">1</span>
+ <span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="nb">eval</span>
+   <span class="o">@</span> <span class="o">./</span><span class="n">boot</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">360</span> <span class="p">[</span><span class="n">inlined</span><span class="p">]</span>
+ <span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="n">include_string</span><span class="p">(</span><span class="n">mapexpr</span><span class="p">::</span><span class="n">typeof</span><span class="p">(</span><span class="n">REPL</span><span class="o">.</span><span class="n">softscope</span><span class="p">),</span> <span class="n">mod</span><span class="p">::</span><span class="n">Module</span><span class="p">,</span> <span class="n">code</span><span class="p">::</span><span class="n">String</span><span class="p">,</span> <span class="n">filename</span><span class="p">::</span><span class="n">String</span><span class="p">)</span>
+   <span class="o">@</span> <span class="n">Base</span> <span class="o">./</span><span class="n">loading</span><span class="o">.</span><span class="n">jl</span><span class="p">:</span><span class="mi">1094</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">FreqTables</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">repeat</span><span class="p">([</span><span class="s">&quot;a&quot;</span><span class="p">,</span> <span class="s">&quot;b&quot;</span><span class="p">,</span> <span class="s">&quot;c&quot;</span><span class="p">,</span> <span class="s">&quot;d&quot;</span><span class="p">],</span> <span class="n">outer</span><span class="o">=</span><span class="p">[</span><span class="mi">100</span><span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="p">[</span><span class="mi">1</span><span class="p">;</span> <span class="mi">1</span><span class="p">;</span> <span class="mi">3</span><span class="p">;</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">qwe</span> <span class="o">=</span> <span class="n">freqtable</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3-element Named Vector{Int64}
+Dim1  │ 
+──────┼──
+1     │ 2
+3     │ 1
+4     │ 1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">using</span> <span class="n">ProgressLogging</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="nd">@progress</span> <span class="k">for</span> <span class="n">i</span> <span class="kp">in</span> <span class="mi">1</span><span class="o">:</span><span class="mi">10</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mf">0.1</span><span class="p">)</span>
+    
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i∈1</span><span class="o">:</span><span class="mi">2</span>
+    <span class="k">for</span> <span class="n">j∈</span> <span class="mi">15</span><span class="o">:.</span><span class="mi">25</span><span class="o">:</span><span class="mi">16</span> 
+        <span class="n">println</span><span class="p">(</span><span class="s">&quot;i=</span><span class="si">$i</span><span class="s">, j=</span><span class="si">$j</span><span class="s">&quot;</span><span class="p">)</span>
+    <span class="k">end</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i=1, j=15.0
+i=1, j=15.25
+i=1, j=15.5
+i=1, j=15.75
+i=1, j=16.0
+i=2, j=15.0
+i=2, j=15.25
+i=2, j=15.5
+i=2, j=15.75
+i=2, j=16.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i∈1</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span> <span class="n">j∈</span> <span class="mi">15</span><span class="o">:.</span><span class="mi">25</span><span class="o">:</span><span class="mi">16</span>
+    <span class="n">println</span><span class="p">(</span><span class="s">&quot;i=</span><span class="si">$i</span><span class="s">, j=</span><span class="si">$j</span><span class="s">&quot;</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>i=1, j=15.0
+i=1, j=15.25
+i=1, j=15.5
+i=1, j=15.75
+i=1, j=16.0
+i=2, j=15.0
+i=2, j=15.25
+i=2, j=15.5
+i=2, j=15.75
+i=2, j=16.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">OLS</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="o">=</span> <span class="n">inv</span><span class="p">(</span><span class="n">X</span><span class="o">&#39;*</span><span class="n">X</span><span class="p">)</span><span class="o">*</span><span class="n">X</span><span class="o">&#39;*</span><span class="n">y</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>OLS (generic function with 1 method)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">qwe</span> <span class="o">=</span> <span class="n">collect</span><span class="p">(</span><span class="mi">1</span><span class="o">:</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100-element Vector{Int64}:
+   1
+   2
+   3
+   4
+   5
+   6
+   7
+   8
+   9
+  10
+  11
+  12
+  13
+   ⋮
+  89
+  90
+  91
+  92
+  93
+  94
+  95
+  96
+  97
+  98
+  99
+ 100
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">map</span><span class="p">(</span><span class="n">x</span><span class="o">-&gt;</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span> <span class="o">?</span> <span class="s">&quot;Sargent&quot;</span> <span class="o">:</span> <span class="s">&quot;Lucas&quot;</span><span class="p">,</span> <span class="n">qwe</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100-element Vector{String}:
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ ⋮
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">broadcast</span><span class="p">(</span><span class="n">x</span><span class="o">-&gt;</span> <span class="n">x</span><span class="o">%</span><span class="mi">2</span><span class="o">==</span><span class="mi">0</span> <span class="o">?</span> <span class="s">&quot;Sargent&quot;</span> <span class="o">:</span> <span class="s">&quot;Lucas&quot;</span><span class="p">,</span> <span class="n">qwe</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100-element Vector{String}:
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ ⋮
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+ &quot;Lucas&quot;
+ &quot;Sargent&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="p">[(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="mi">2</span><span class="p">,</span> <span class="n">y</span> <span class="o">∈</span> <span class="mi">1</span><span class="o">:</span><span class="mi">1</span><span class="o">:</span><span class="mi">3</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2×3 Matrix{Tuple{Int64, Int64}}:
+ (1, 1)  (1, 2)  (1, 3)
+ (2, 1)  (2, 2)  (2, 3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="p">((</span><span class="mi">100</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">100</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">^</span><span class="mi">1</span><span class="o">/.</span><span class="mi">5</span> <span class="c"># * (10 - -2)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="o">-</span><span class="mi">2</span> <span class="o">+</span> <span class="p">((</span><span class="mi">100</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">100</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">^</span><span class="mi">1</span><span class="o">/.</span><span class="mi">5</span> <span class="o">*</span> <span class="p">(</span><span class="mi">10</span> <span class="o">-</span> <span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">balance_sheet</span> <span class="o">=</span> <span class="p">[(</span><span class="o">-</span><span class="mi">2</span> <span class="o">+</span> <span class="p">((</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">100</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span><span class="o">^</span><span class="p">(</span><span class="mi">1</span><span class="o">/.</span><span class="mi">5</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">10</span> <span class="o">-</span> <span class="o">-</span><span class="mi">2</span><span class="p">))</span> <span class="k">for</span> <span class="n">i∈1</span><span class="o">:</span><span class="mi">100</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100-element Vector{Float64}:
+ -2.0
+ -1.9987756351392716
+ -1.995102540557086
+ -1.9889807162534434
+ -1.980410162228344
+ -1.9693908784817875
+ -1.955922865013774
+ -1.9400061218243037
+ -1.9216406489133762
+ -1.9008264462809916
+ -1.8775635139271503
+ -1.8518518518518519
+ -1.8236914600550964
+  ⋮
+  7.481481481481481
+  7.698194061830426
+  7.917355371900825
+  8.138965411692686
+  8.363024181205999
+  8.589531680440771
+  8.818487909397
+  9.049892868074686
+  9.28374655647383
+  9.52004897459443
+  9.758800122436487
+ 10.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">income_shocks</span> <span class="o">=</span> <span class="n">exp</span><span class="o">.</span><span class="p">(</span> <span class="n">range</span><span class="p">(</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span> <span class="n">stop</span><span class="o">=</span><span class="n">log</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">length</span><span class="o">=</span> <span class="mi">25</span><span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>25-element Vector{Float64}:
+ 1.0
+ 1.029302236643492
+ 1.0594630943592953
+ 1.0905077326652577
+ 1.122462048309373
+ 1.155352696872273
+ 1.189207115002721
+ 1.2240535433046553
+ 1.2599210498948732
+ 1.2968395546510096
+ 1.3348398541700344
+ 1.3739536474580891
+ 1.414213562373095
+ 1.4556531828421875
+ 1.4983070768766815
+ 1.5422108254079407
+ 1.5874010519681994
+ 1.6339154532410998
+ 1.681792830507429
+ 1.7310731220122861
+ 1.7817974362806785
+ 1.8340080864093424
+ 1.8877486253633868
+ 1.9430638823072117
+ 2.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">map</span><span class="p">(</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="k">begin</span>
+            <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+            <span class="mi">2</span><span class="o">+</span><span class="mi">2</span>
+            <span class="k">return</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">end</span><span class="p">,</span>
+        <span class="mi">1</span><span class="o">:</span><span class="mi">10</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>10-element Vector{Int64}:
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+ 10
+ 11
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="n">states</span> <span class="o">=</span> <span class="p">[(</span><span class="n">κ</span><span class="p">,</span><span class="n">ε</span><span class="p">)</span> <span class="k">for</span> <span class="n">κ</span> <span class="o">∈</span> <span class="n">balance_sheet</span><span class="p">,</span> <span class="n">ε</span> <span class="o">∈</span> <span class="n">income_shocks</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100×25 Matrix{Tuple{Float64, Float64}}:
+ (-2.0, 1.0)      (-2.0, 1.0293)      (-2.0, 1.05946)      …  (-2.0, 2.0)
+ (-1.99878, 1.0)  (-1.99878, 1.0293)  (-1.99878, 1.05946)     (-1.99878, 2.0)
+ (-1.9951, 1.0)   (-1.9951, 1.0293)   (-1.9951, 1.05946)      (-1.9951, 2.0)
+ (-1.98898, 1.0)  (-1.98898, 1.0293)  (-1.98898, 1.05946)     (-1.98898, 2.0)
+ (-1.98041, 1.0)  (-1.98041, 1.0293)  (-1.98041, 1.05946)     (-1.98041, 2.0)
+ (-1.96939, 1.0)  (-1.96939, 1.0293)  (-1.96939, 1.05946)  …  (-1.96939, 2.0)
+ (-1.95592, 1.0)  (-1.95592, 1.0293)  (-1.95592, 1.05946)     (-1.95592, 2.0)
+ (-1.94001, 1.0)  (-1.94001, 1.0293)  (-1.94001, 1.05946)     (-1.94001, 2.0)
+ (-1.92164, 1.0)  (-1.92164, 1.0293)  (-1.92164, 1.05946)     (-1.92164, 2.0)
+ (-1.90083, 1.0)  (-1.90083, 1.0293)  (-1.90083, 1.05946)     (-1.90083, 2.0)
+ (-1.87756, 1.0)  (-1.87756, 1.0293)  (-1.87756, 1.05946)  …  (-1.87756, 2.0)
+ (-1.85185, 1.0)  (-1.85185, 1.0293)  (-1.85185, 1.05946)     (-1.85185, 2.0)
+ (-1.82369, 1.0)  (-1.82369, 1.0293)  (-1.82369, 1.05946)     (-1.82369, 2.0)
+ ⋮                                                         ⋱  
+ (7.48148, 1.0)   (7.48148, 1.0293)   (7.48148, 1.05946)      (7.48148, 2.0)
+ (7.69819, 1.0)   (7.69819, 1.0293)   (7.69819, 1.05946)      (7.69819, 2.0)
+ (7.91736, 1.0)   (7.91736, 1.0293)   (7.91736, 1.05946)   …  (7.91736, 2.0)
+ (8.13897, 1.0)   (8.13897, 1.0293)   (8.13897, 1.05946)      (8.13897, 2.0)
+ (8.36302, 1.0)   (8.36302, 1.0293)   (8.36302, 1.05946)      (8.36302, 2.0)
+ (8.58953, 1.0)   (8.58953, 1.0293)   (8.58953, 1.05946)      (8.58953, 2.0)
+ (8.81849, 1.0)   (8.81849, 1.0293)   (8.81849, 1.05946)      (8.81849, 2.0)
+ (9.04989, 1.0)   (9.04989, 1.0293)   (9.04989, 1.05946)   …  (9.04989, 2.0)
+ (9.28375, 1.0)   (9.28375, 1.0293)   (9.28375, 1.05946)      (9.28375, 2.0)
+ (9.52005, 1.0)   (9.52005, 1.0293)   (9.52005, 1.05946)      (9.52005, 2.0)
+ (9.7588, 1.0)    (9.7588, 1.0293)    (9.7588, 1.05946)       (9.7588, 2.0)
+ (10.0, 1.0)      (10.0, 1.0293)      (10.0, 1.05946)         (10.0, 2.0)
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "julia-1.6"
+        },
+        kernelOptions: {
+            kernelName: "julia-1.6",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'julia-1.6'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Krzysztof Pytka, PhD<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
