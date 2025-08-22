@@ -1672,7 +1672,7 @@ input, select, textarea {
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
     padding: 2rem;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     position: relative;
     overflow: hidden;
 }
@@ -1686,7 +1686,7 @@ input, select, textarea {
     height: 3px;
     background: linear-gradient(90deg, #4a90e2, #7b68ee);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.5s ease;
 }
 
 .paper-item:hover {
@@ -1719,7 +1719,7 @@ input, select, textarea {
 .coauthors a {
     color: #4a90e2;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.5s ease;
 }
 
 .coauthors a:hover {
@@ -1745,7 +1745,7 @@ input, select, textarea {
     text-decoration: none;
     font-size: 0.9rem;
     font-weight: 500;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     backdrop-filter: blur(10px);
 }
 
@@ -1828,7 +1828,7 @@ input, select, textarea {
 .additional-resources a {
     color: #4a90e2;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.5s ease;
 }
 
 .additional-resources a:hover {
