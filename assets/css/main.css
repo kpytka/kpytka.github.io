@@ -1,6 +1,70 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
+/* Jost Font Family */
+@font-face {
+	font-family: 'Jost';
+	src: url('../webfonts/Jost-100-Hairline.otf') format('opentype');
+	font-weight: 100;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Jost';
+	src: url('../webfonts/Jost-200-Thin.otf') format('opentype');
+	font-weight: 200;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Jost';
+	src: url('../webfonts/Jost-300-Light.otf') format('opentype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Jost';
+	src: url('../webfonts/Jost-400-Book.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Jost';
+	src: url('../webfonts/Jost-500-Medium.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Jost';
+	src: url('../webfonts/Jost-600-Semi.otf') format('opentype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Jost';
+	src: url('../webfonts/Jost-700-Bold.otf') format('opentype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Jost';
+	src: url('../webfonts/Jost-800-Heavy.otf') format('opentype');
+	font-weight: 800;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Jost';
+	src: url('../webfonts/Jost-900-Black.otf') format('opentype');
+	font-weight: 900;
+	font-style: normal;
+}
+
 /*
 	Dimension by HTML5 UP
 	html5up.net | @ajlkn
@@ -188,7 +252,7 @@ input, select, textarea {
 			text-decoration: none;
 		}
 
-		h1.major, h2.major, h3.major, h4.major, h5.major, h6.major {
+		h1.major, h3.major, h4.major, h5.major, h6.major {
 			border-bottom: solid 1px #ffffff;
 			width: -moz-max-content;
 			width: -webkit-max-content;
@@ -196,6 +260,21 @@ input, select, textarea {
 			width: max-content;
 			padding-bottom: 0.5rem;
 			margin: 0 0 2rem 0;
+		}
+
+		h2.major {
+			font-family: 'Jost', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+			font-size: 2.4rem;
+			font-weight: 600;
+			letter-spacing: -0.02rem;
+			color: #ffffff;
+			text-align: left;
+			margin: 0 0 2rem 0;
+			padding: 0 0 0.75rem 0;
+			position: relative;
+			text-transform: none;
+			border-bottom: 2px solid #ffffff;
+			width: auto;
 		}
 
 	h1 {
@@ -211,7 +290,9 @@ input, select, textarea {
 	}
 
 	h3 {
+		font-family: 'Jost', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 		font-size: 1rem;
+		font-weight: 500;
 	}
 
 	h4 {
@@ -236,6 +317,11 @@ input, select, textarea {
 		h2 {
 			font-size: 1.25em;
 			line-height: 1.5;
+		}
+
+		h2.major {
+			font-size: 2rem;
+			letter-spacing: -0.01rem;
 		}
 
 	}
@@ -1332,11 +1418,24 @@ input, select, textarea {
 					margin-bottom: 0;
 				}
 
+			#header .content h2 {
+				font-family: 'Jost', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+				font-size: 2.2rem;
+				font-weight: 400;
+				letter-spacing: -0.01rem;
+				margin: 0 0 0.5rem 0;
+				color: #ffffff;
+				text-transform: none;
+			}
+
 			#header .content p {
-				text-transform: uppercase;
-				letter-spacing: 0.2rem;
-				font-size: 0.8rem;
-				line-height: 2;
+				font-family: 'Jost', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+				text-transform: none;
+				letter-spacing: 0.05rem;
+				font-size: 1rem;
+				line-height: 1.6;
+				color: rgba(255, 255, 255, 0.8);
+				font-weight: 300;
 			}
 
 		#header nav ul {
@@ -1361,15 +1460,18 @@ input, select, textarea {
 				}
 
 				#header nav ul li a {
+					font-family: 'Jost', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 					display: block;
 					min-width: 7.5rem;
 					height: 2.75rem;
 					line-height: 2.75rem;
 					padding: 0 1.25rem 0 1.45rem;
-					text-transform: uppercase;
-					letter-spacing: 0.2rem;
-					font-size: 0.8rem;
+					text-transform: none;
+					letter-spacing: 0.05rem;
+					font-size: 0.9rem;
+					font-weight: 400;
 					border-bottom: 0;
+					transition: background-color 0.2s ease;
 				}
 
 					#header nav ul li a:hover {
