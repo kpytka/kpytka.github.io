@@ -1659,3 +1659,217 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+/* Research Section Styling */
+.research-papers {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.paper-item {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.paper-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #4a90e2, #7b68ee);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.paper-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.paper-item:hover::before {
+    opacity: 1;
+}
+
+.paper-item h3 {
+    color: #e6f3ff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+    text-transform: none;
+}
+
+.coauthors {
+    color: #8892b0;
+    font-style: italic;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.coauthors a {
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.coauthors a:hover {
+    color: #7b68ee;
+}
+
+.paper-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.paper-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(74, 144, 226, 0.1);
+    border: 1px solid rgba(74, 144, 226, 0.3);
+    border-radius: 6px;
+    color: #4a90e2;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.paper-links a:hover {
+    background: rgba(74, 144, 226, 0.2);
+    border-color: rgba(74, 144, 226, 0.5);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+}
+
+.paper-links i {
+    font-size: 1rem;
+}
+
+.new-version {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.paper-status {
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    background: rgba(255, 193, 7, 0.1);
+    border-left: 4px solid #ffc107;
+    border-radius: 4px;
+}
+
+.paper-status em {
+    color: #ffc107;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 0.75rem;
+}
+
+.paper-abstract {
+    color: #ccd6f6;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    text-align: justify;
+    hyphens: auto;
+    margin-bottom: 1rem;
+}
+
+.additional-resources {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.additional-resources h4 {
+    color: #4a90e2;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.additional-resources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.additional-resources li {
+    margin-bottom: 0.75rem;
+    color: #8892b0;
+    line-height: 1.6;
+}
+
+.additional-resources a {
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.additional-resources a:hover {
+    color: #7b68ee;
+}
+
+/* Responsive design for research section */
+@media screen and (max-width: 736px) {
+    .paper-item {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .paper-item h3 {
+        font-size: 1.05rem;
+    }
+    
+    .paper-links {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .paper-links a {
+        justify-content: center;
+    }
+    
+    .paper-abstract {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .paper-item {
+        padding: 1rem;
+    }
+    
+    .paper-item h3 {
+        font-size: 1rem;
+    }
+    
+    .paper-abstract {
+        font-size: 0.85rem;
+    }
+}
