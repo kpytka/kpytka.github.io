@@ -32,7 +32,12 @@
 						</div>
 						<div class="content">
 							<div class="inner">
-								<h2 id="typing-name">Krzysztof Pytka</h2>
+								<div style="height: 3rem; display: flex; align-items: center; justify-content: center;">
+									<h2 id="typing-name"></h2>
+									<noscript>
+										<h2>Krzysztof Pytka</h2>
+									</noscript>
+								</div>
 								<p> My personal website</p>
 							</div>
 						</div>
@@ -629,7 +634,72 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 	referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 	<!-- End of Statcounter Code -->
 
-
+	<!-- Typing Animation Script -->
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const typingElement = document.getElementById('typing-name');
+			const finalText = 'Krzysztof Pytka';
+			const misspellings = ['Krysto', 'Kzryzs', 'Kryzys'];
+			
+			let currentMisspellingIndex = 0;
+			let currentCharIndex = 0;
+			let isTypingMisspelling = true;
+			let isDeleting = false;
+			
+			function typeText(text, onComplete) {
+				let charIndex = 0;
+				const typeInterval = setInterval(() => {
+					if (charIndex < text.length) {
+						typingElement.textContent = text.substring(0, charIndex + 1);
+						charIndex++;
+					} else {
+						clearInterval(typeInterval);
+						setTimeout(onComplete, 200); // Wait before next action
+					}
+				}, 50); // Typing speed
+			}
+			
+			function deleteText(onComplete) {
+				let currentText = typingElement.textContent;
+				const deleteInterval = setInterval(() => {
+					if (currentText.length > 0) {
+						currentText = currentText.substring(0, currentText.length - 1);
+						typingElement.textContent = currentText;
+					} else {
+						clearInterval(deleteInterval);
+						setTimeout(onComplete, 100); // Wait before typing next
+					}
+				}, 30); // Deletion speed
+			}
+			
+			function animateMisspellings() {
+				if (currentMisspellingIndex < misspellings.length) {
+					const misspelling = misspellings[currentMisspellingIndex];
+					
+					typeText(misspelling, () => {
+						setTimeout(() => {
+							deleteText(() => {
+								currentMisspellingIndex++;
+								animateMisspellings();
+							});
+						}, 150); // Hold misspelling for 150ms
+					});
+				} else {
+					// All misspellings done, type the final correct name
+					setTimeout(() => {
+						typeText(finalText, () => {
+							// Animation complete
+						});
+					}, 100);
+				}
+			}
+			
+			// Start the animation
+			setTimeout(() => {
+				animateMisspellings();
+			}, 1000); // Wait 1 second after page load
+		});
+	</script>
 
 	</body>
 </html>
