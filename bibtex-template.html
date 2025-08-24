@@ -40,6 +40,11 @@
 </head>
 <body>
     <h1>BibTeX Citation</h1>
+    <div id="random-order-info" style="display: none; margin-bottom: 1.5rem; padding: 1rem; background-color: #2a2e31; border-radius: 6px; border-left: 4px solid #4A90E2;">
+        <p style="margin: 0; color: #e6e6e6; font-size: 0.9rem;">
+            <strong>💡 Random Author Ordering:</strong> To generate random author order in BibTeX citations, use the <a href="https://github.com/ShiroTakeda/econ-bst" target="_blank" style="color: #4A90E2;">econ-bst template</a> and add <code>nameorder = {random}</code> to your BibTeX entries. This implements the "certified random order" proposed by Ray & Robson (2018), AER.
+        </p>
+    </div>
     <div id="bibtex-content"></div>
     <br><br>
     <button class="copy-btn" onclick="copyBibtex()">Copy to Clipboard</button>
@@ -71,6 +76,11 @@
         
         if (bibtexContent) {
             document.getElementById('bibtex-content').innerHTML = decodeURIComponent(bibtexContent);
+            
+            // Check if this is the pytka_runge_2025 paper and show random order info
+            if (bibtexContent.includes('pytka_runge_2025')) {
+                document.getElementById('random-order-info').style.display = 'block';
+            }
         }
     </script>
 </body>
