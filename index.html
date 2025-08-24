@@ -19,6 +19,8 @@
 		<link rel="apple-touch-icon" href="favicon.svg" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		
+
 	</head>
 	<body class="is-preload">
 
@@ -144,6 +146,9 @@
 										<a target="_blank" rel="noopener noreferrer" href='https://kpytka.github.io/Pytka_Consumption_Black_Box___Slides__SED_2025.pdf'>
 											<i class="fas fa-chart-pie"></i> [Slides]
 										</a>
+										<a href="#" onclick="showBibtex('bibtex-1'); return false;">
+											<i class="fas fa-quote-left"></i> [BibTeX]
+										</a>
 									</div>
 									
 									<div class="paper-abstract">
@@ -171,6 +176,9 @@
 										<a target="_blank" rel="noopener noreferrer" href='https://kpytka.github.io/Hawaii_Workshop_2024.pdf'>
 											<i class="fas fa-chart-pie"></i> [Slides]
 										</a>
+										<a href="#" onclick="showBibtex('bibtex-2'); return false;">
+											<i class="fas fa-quote-left"></i> [BibTeX]
+										</a>
 									</div>
 									
 									<div class="paper-status">
@@ -194,6 +202,9 @@
 									<div class="paper-links">
 										<a target="_blank" rel="noopener noreferrer" href='https://kpytka.github.io/Understanding_the_Sources_of_Earnings_Losses.pdf'>
 											<i class="far fa-file-pdf"></i> [PDF]
+										</a>
+										<a href="#" onclick="showBibtex('bibtex-3'); return false;">
+											<i class="fas fa-quote-left"></i> [BibTeX]
 										</a>
 										<!-- <span class="new-version">(new version!)</span> -->
 									</div>
@@ -234,6 +245,9 @@
 										<a target="_blank" rel="noopener noreferrer" href='https://www.dropbox.com/s/mw87g0bz56mvu8a/GulyasPytka_covid.pdf?dl=0'>
 											<i class="far fa-file-pdf"></i> [PDF]
 										</a>
+										<a href="#" onclick="showBibtex('bibtex-4'); return false;">
+											<i class="fas fa-quote-left"></i> [BibTeX]
+										</a>
 									</div>
 									
 									<div class="paper-status">
@@ -245,6 +259,47 @@
 										Covid-19-related job terminations are associated with lower losses in earnings and wages compared to the Great Recession, but similar employment losses. We further derive an accurate but simple policy rule targeting individuals vulnerable to long-term wage losses.
 									</div>
 								</div>
+							</div>
+							
+
+							
+							<!-- Hidden BibTeX content -->
+							<div id="bibtex-1" style="display: none;">
+								<pre>@article{pytka_runge_2025,
+  title={Looking into the Consumption Black Box: Evidence from Scanner Data},
+  author={Krzysztof Pytka and Daniel Runge},
+  year={2025},
+  note={Working Paper}
+}</pre>
+							</div>
+							
+							<div id="bibtex-2" style="display: none;">
+								<pre>@article{pytka_2024,
+  title={Shopping Frictions with Household Heterogeneity: Theory & Empirics},
+  author={Krzysztof Pytka},
+  year={2024}
+  
+}</pre>
+							</div>
+							
+							<div id="bibtex-3" style="display: none;">
+								<pre>@article{gulyas_pytka_2024,
+  title={Understanding the Sources of Earnings Losses After Job Displacement: A Machine-Learning Approach},
+  author={Andreas Gulyas and Krzysztof Pytka},
+
+  year={2024}
+  
+}</pre>
+							</div>
+							
+							<div id="bibtex-4" style="display: none;">
+								<pre>@article{gulyas_pytka_2020,
+  title={The Consequences of the Covid-19 Job Losses: Who Will Suffer Most and by How Much?},
+  author={Andreas Gulyas and Krzysztof Pytka},
+  journal={CEPR Covid Economics},
+  volume={47},
+  year={2020}
+}</pre>
 							</div>
 						</article>
 
@@ -697,11 +752,26 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 				}
 			}
 			
-			// Start the animation
-			setTimeout(() => {
-				animateMisspellings();
-			}, 1000); // Wait 1 second after page load
-		});
+					// Start the animation
+		setTimeout(() => {
+			animateMisspellings();
+		}, 1000); // Wait 1 second after page load
+	});
+	</script>
+
+	<!-- BibTeX JavaScript -->
+	<script>
+		function showBibtex(bibtexId) {
+			const bibtexDiv = document.getElementById(bibtexId);
+			
+			if (bibtexDiv) {
+				const bibtexContent = bibtexDiv.innerHTML;
+				const encodedContent = encodeURIComponent(bibtexContent);
+				const url = 'bibtex-template.html?content=' + encodedContent;
+				
+				window.open(url, '_blank', 'width=600,height=500,scrollbars=yes,resizable=yes');
+			}
+		}
 	</script>
 
 	</body>
