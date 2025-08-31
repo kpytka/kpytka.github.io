@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Favicon Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #1b1f22;
+            color: white;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        canvas {
+            border: 1px solid #333;
+            margin: 10px 0;
+        }
+        .controls {
+            margin: 20px 0;
+        }
+        select, input, button {
+            margin: 5px;
+            padding: 8px;
+            background: #333;
+            color: white;
+            border: 1px solid #555;
+            border-radius: 4px;
+        }
+        button {
+            cursor: pointer;
+        }
+        button:hover {
+            background: #555;
+        }
+        .icon-preview {
+            font-size: 48px;
+            margin: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FontAwesome Favicon Generator</h1>
+        
+        <div class="controls">
+            <label for="iconSelect">Choose Icon:</label>
+            <select id="iconSelect">
+                <option value="fa-graduation-cap">Graduation Cap (Academic)</option>
+                <option value="fa-university">University</option>
+                <option value="fa-chart-line">Chart Line (Economics)</option>
+                <option value="fa-calculator">Calculator</option>
+                <option value="fa-microscope">Microscope (Research)</option>
+                <option value="fa-book">Book</option>
+                <option value="fa-lightbulb">Lightbulb (Ideas)</option>
+                <option value="fa-star">Star</option>
+                <option value="fa-diamond">Diamond</option>
+                <option value="fa-gem">Gem</option>
+                <option value="fa-crown">Crown</option>
+                <option value="fa-heart">Heart</option>
+                <option value="fa-leaf">Leaf</option>
+                <option value="fa-feather">Feather</option>
+            </select>
+            
+            <label for="bgColor">Background Color:</label>
+            <input type="color" id="bgColor" value="#1b1f22">
+            
+            <label for="iconColor">Icon Color:</label>
+            <input type="color" id="iconColor" value="#ffffff">
+            
+            <button onclick="generateFavicon()">Generate Favicon</button>
+            <button onclick="downloadFavicon()">Download Favicon</button>
+        </div>
+        
+        <div class="icon-preview">
+            <i id="previewIcon" class="fas fa-graduation-cap"></i>
+        </div>
+        
+        <canvas id="faviconCanvas" width="32" height="32"></canvas>
+        <canvas id="faviconCanvasLarge" width="192" height="192"></canvas>
+        
+        <p>Right-click on the canvas and "Save image as..." to download the favicon.</p>
+    </div>
+
+    <script>
+        const iconSelect = document.getElementById('iconSelect');
+        const previewIcon = document.getElementById('previewIcon');
+        const bgColor = document.getElementById('bgColor');
+        const iconColor = document.getElementById('iconColor');
+        
+        iconSelect.addEventListener('change', updatePreview);
+        bgColor.addEventListener('change', updatePreview);
+        iconColor.addEventListener('change', updatePreview);
+        
+        function updatePreview() {
+            previewIcon.className = `fas ${iconSelect.value}`;
+            previewIcon.style.color = iconColor.value;
+            generateFavicon();
+        }
+        
+        function generateFavicon() {
+            const canvas = document.getElementById('faviconCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Clear canvas
+            ctx.clearRect(0, 0, 32, 32);
+            
+            // Draw background
+            ctx.fillStyle = bgColor.value;
+            ctx.fillRect(0, 0, 32, 32);
+            
+            // Create temporary div to measure icon
+            const tempDiv = document.createElement('div');
+            tempDiv.innerHTML = `<i class="fas ${iconSelect.value}" style="color: ${iconColor.value}; font-size: 20px;"></i>`;
+            tempDiv.style.position = 'absolute';
+            tempDiv.style.left = '-9999px';
+            document.body.appendChild(tempDiv);
+            
+            // Draw icon (simplified - just a placeholder)
+            ctx.fillStyle = iconColor.value;
+            ctx.font = '20px Arial';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('★', 16, 16);
+            
+            document.body.removeChild(tempDiv);
+            
+            // Generate larger version
+            const canvasLarge = document.getElementById('faviconCanvasLarge');
+            const ctxLarge = canvasLarge.getContext('2d');
+            
+            ctxLarge.clearRect(0, 0, 192, 192);
+            ctxLarge.fillStyle = bgColor.value;
+            ctxLarge.fillRect(0, 0, 192, 192);
+            ctxLarge.fillStyle = iconColor.value;
+            ctxLarge.font = '120px Arial';
+            ctxLarge.textAlign = 'center';
+            ctxLarge.textBaseline = 'middle';
+            ctxLarge.fillText('★', 96, 96);
+        }
+        
+        function downloadFavicon() {
+            const canvas = document.getElementById('faviconCanvas');
+            const link = document.createElement('a');
+            link.download = 'favicon.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+        
+        // Initialize
+        updatePreview();
+    </script>
+</body>
+</html>
