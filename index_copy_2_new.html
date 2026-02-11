@@ -21,6 +21,218 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		
 
+
+		<!-- Elegant Typography -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+
+		<style>
+			/* -- Elegant University Overrides -- */
+
+			/* Primary typography: classical serif throughout */
+			#header .content .inner h2,
+			#header .content .inner p {
+				font-family: 'Cormorant Garamond', 'Georgia', serif;
+			}
+
+			#header .content .inner h2 {
+				font-weight: 400;
+				letter-spacing: 0.15em;
+				text-transform: none;
+			}
+
+			#header .content .inner p {
+				font-weight: 300;
+				font-size: 1.05em;
+				letter-spacing: 0.12em;
+				font-style: italic;
+				opacity: 0.75;
+			}
+
+			/* Navigation links: elegant small caps feel */
+			#header nav ul li a {
+				font-family: 'Cormorant Garamond', 'Georgia', serif;
+				font-weight: 500;
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+				font-size: 0.78em;
+			}
+
+			/* Article headings */
+			#main article h2.major {
+				font-family: 'Cormorant Garamond', 'Georgia', serif;
+				font-weight: 400;
+				letter-spacing: 0.1em;
+				padding-bottom: 0.3rem;
+				position: relative;
+			}
+
+			/* Ornamental line beneath major headings */
+			#main article h2.major::after {
+				content: '';
+				display: block;
+				width: 60px;
+				height: 1px;
+				margin: 1rem auto 0 0;
+				background: currentColor;
+				opacity: 0.35;
+			}
+
+			/* Paper / section headings */
+			.paper-item h3,
+			#main article h3 {
+				font-family: 'Cormorant Garamond', 'Georgia', serif;
+				font-weight: 600;
+				letter-spacing: 0.03em;
+				font-size: 1.15em;
+			}
+
+			/* Body text in articles */
+			#main article p,
+			#main article .paper-abstract,
+			#main article .about-text p,
+			#main article .research-focus {
+				font-family: 'EB Garamond', 'Georgia', serif;
+				font-size: 1.02em;
+				line-height: 1.75;
+			}
+
+			/* Co-authors line */
+			.coauthors {
+				font-family: 'EB Garamond', 'Georgia', serif;
+				font-style: italic;
+			}
+
+			/* Paper status (R&R, Accepted, etc.) */
+			.paper-status {
+				font-family: 'EB Garamond', 'Georgia', serif;
+			}
+
+			/* Blockquotes: elegant styling */
+			#main article blockquote {
+				font-family: 'EB Garamond', 'Georgia', serif;
+				font-style: italic;
+				font-size: 1em;
+				line-height: 1.8;
+				border-left: 2px solid rgba(255,255,255,0.2);
+				padding-left: 1.5rem;
+				margin: 1.5rem 0;
+				position: relative;
+			}
+
+			/* Decorative opening quote mark */
+			#main article blockquote::before {
+				content: '\201C';
+				font-family: 'Cormorant Garamond', 'Georgia', serif;
+				font-size: 3em;
+				font-style: normal;
+				position: absolute;
+				left: -0.1rem;
+				top: -0.6rem;
+				opacity: 0.15;
+				line-height: 1;
+			}
+
+			/* CV / action buttons: refined */
+			.cv-button {
+				font-family: 'Cormorant Garamond', 'Georgia', serif !important;
+				letter-spacing: 0.08em !important;
+				font-weight: 500 !important;
+			}
+
+			/* Paper links */
+			.paper-links a {
+				font-family: 'Cormorant Garamond', 'Georgia', serif;
+				letter-spacing: 0.04em;
+			}
+
+			/* Ornamental divider between paper items */
+			.paper-item + .paper-item {
+				position: relative;
+				padding-top: 2rem;
+			}
+
+			.paper-item + .paper-item::before {
+				content: '\25C6';
+				display: block;
+				text-align: center;
+				font-size: 0.45em;
+				letter-spacing: 1em;
+				opacity: 0.18;
+				margin-bottom: 0.5rem;
+				position: absolute;
+				top: 0.5rem;
+				left: 0;
+				right: 0;
+			}
+
+			/* Ornamental separator for sections within teaching */
+			.paper-item .paper-abstract + .paper-abstract {
+				border-top: 1px solid rgba(255,255,255,0.06);
+				padding-top: 0.8rem;
+				margin-top: 0.8rem;
+			}
+
+			/* Footer: refined */
+			#footer p {
+				font-family: 'Cormorant Garamond', 'Georgia', serif;
+				letter-spacing: 0.1em;
+				font-size: 0.85em;
+			}
+
+			/* Contact section address text */
+			#contact p {
+				font-family: 'EB Garamond', 'Georgia', serif;
+				line-height: 1.9;
+			}
+
+			/* Location heading in contact */
+			#contact h3 {
+				font-family: 'Cormorant Garamond', 'Georgia', serif;
+				font-weight: 400;
+				letter-spacing: 0.15em;
+				text-transform: uppercase;
+				font-size: 0.95em;
+			}
+
+			/* Subtle ornament above footer */
+			#footer::before {
+				content: '\2014  \2726  \2014';
+				display: block;
+				text-align: center;
+				font-size: 0.65em;
+				letter-spacing: 0.5em;
+				opacity: 0.15;
+				margin-bottom: 1rem;
+			}
+
+			/* Intro text: slightly larger first paragraph */
+			.intro-text {
+				font-size: 1.05em !important;
+			}
+
+			/* Refined image caption */
+			.profile-image p {
+				font-family: 'EB Garamond', 'Georgia', serif !important;
+				letter-spacing: 0.04em;
+			}
+
+			/* Additional resources heading */
+			.additional-resources h4 {
+				font-family: 'Cormorant Garamond', 'Georgia', serif;
+				font-weight: 400;
+				letter-spacing: 0.08em;
+				font-size: 0.95em;
+			}
+
+			/* Misc article */
+			#misc p {
+				font-family: 'EB Garamond', 'Georgia', serif;
+				line-height: 1.8;
+			}
+		</style>
+
 	</head>
 	<body class="is-preload">
 
@@ -415,11 +627,11 @@
 										<div style="margin-top: 2rem; text-align: center;">
 											<h3 style="margin-bottom: 1rem;">Location</h3>
 
-											<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2234.362619539787!2d-3.1885225222407056!3d55.94308667731769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c783b8c16ca3%3A0xe47294024c33a790!2sSchool%20of%20Economics!5e0!3m2!1sen!2suk!4v1770804652280!5m2!1sen!2suk" width="100%" height="300" style="border:0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+											<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4468.724743411146!2d-3.1884566228418216!3d55.943090973155144!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c783b93865dd%3A0x7ea9dac331906252!2s31%20Buccleuch%20Pl%2C%20Edinburgh%20EH8%209JS%2C%20UK!5e0!3m2!1sen!2sde!4v1770740591381!5m2!1sen!2sde" width="100%" height="300" style="border:0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 											
 											<p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-												<a href="https://maps.app.goo.gl/bhm8For63ns3XpsK9" target="_blank" rel="noopener noreferrer">
+												<a href="https://maps.app.goo.gl/wCQzJ2jCCoyfNa2D9" target="_blank" rel="noopener noreferrer">
 													<i class="fa fa-external-link"></i> Open in Google Maps
 												</a>
 											</p>
