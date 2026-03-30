@@ -9,6 +9,23 @@
 	font-style: normal;
 }
 
+
+.social-list {
+	list-style: none;
+	padding-left: 0;
+	margin-top: 0;
+	margin-bottom: 0.6em;
+  }
+
+  /* Paragraphs before these lists use global p { margin-bottom: 2rem }; pull that in so the label sits near the links */
+  #main article p:has(+ .social-list) {
+	margin-bottom: 0.35rem;
+  }
+
+  p + .social-list {
+	margin-top: 0;
+  }
+
 @font-face {
 	font-family: 'Jost';
 	src: url('../webfonts/Jost-200-Thin.otf') format('opentype');
