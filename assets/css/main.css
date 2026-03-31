@@ -10,12 +10,34 @@
 }
 
 
+.social-row {
+	display: flex;
+	align-items: baseline;
+	flex-wrap: wrap;
+	gap: 0.2rem 1rem;
+	margin-bottom: 0.5em;
+}
+
 .social-list {
 	list-style: none;
 	padding-left: 0;
-	margin-top: 0;
-	margin-bottom: 0.6em;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.2rem 0;
   }
+
+  .social-list li + li::before {
+	content: '/';
+	margin: 0 0.6rem;
+	opacity: 0.35;
+  }
+
+#misc img {
+	border-radius: 10px;
+	overflow: hidden;
+}
 
   /* Paragraphs before these lists use global p { margin-bottom: 2rem }; pull that in so the label sits near the links */
   #main article p:has(+ .social-list) {
@@ -1987,12 +2009,85 @@ input, select, textarea {
     .paper-item {
         padding: 1rem;
     }
-    
+
     .paper-item h3 {
         font-size: 1rem;
     }
-    
+
     .paper-abstract {
         font-size: 0.85rem;
+    }
+}
+
+/* ============================================================
+   About section — side-by-side layout + styled buttons
+   ============================================================ */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 220px;
+    gap: 2rem;
+    align-items: start;
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.profile-image {
+    width: 220px;
+    flex-shrink: 0;
+}
+
+.profile-image .image.main {
+    width: 220px;
+    margin: 0;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.profile-image .image.main img {
+    width: 220px;
+    height: auto;
+    display: block;
+}
+
+.research-focus {
+    padding: 0.9rem 1.1rem;
+    border-left: 3px solid rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 0 6px 6px 0;
+}
+
+.cv-link {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+    margin-top: 0.25rem;
+}
+
+.cv-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-left: 0 !important;
+}
+
+@media screen and (max-width: 736px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-image {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .profile-image .image.main,
+    .profile-image .image.main img {
+        width: 100%;
     }
 }
