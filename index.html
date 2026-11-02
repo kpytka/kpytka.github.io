@@ -1,832 +1,580 @@
-<!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
-		<title>Krzysztof Pytka | University of Edinburgh </title>
-		<meta name="description" content="Cześć! This website belongs to Krzysztof Pytka (University of Edinburgh)."/>
-	<meta name="keywords" content="Krzysztof Pytka, Economics, Econ, Macroeconomics, Macro, Big Data, consumer search, labor, machine learning,
-	household heterogeneity, academic, University of Edinburgh, EUI, European University Institute, Florence"/>
-	<meta name="robots" content="index,follow" />
-
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Krzysztof Pytka | Lecturer in Economics, University of Edinburgh</title>
+		<meta name="description" content="Krzysztof Pytka is a Lecturer (Assistant Professor) in Economics at the University of Edinburgh. Research on household heterogeneity, consumption, shopping frictions and machine learning; teaching, CV and contact."/>
+		<meta name="author" content="Krzysztof Pytka" />
+		<link rel="canonical" href="https://kpytka.eu/" />
+		<meta name="keywords" content="Krzysztof Pytka, Economics, Econ, Macroeconomics, Macro, Big Data, consumer search, labor, machine learning,
+		household heterogeneity, academic, University of Edinburgh, EUI, European University Institute, Florence"/>
+		<meta name="robots" content="index,follow" />
+		<meta name="color-scheme" content="light dark" />
+		<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)" />
+		<meta name="theme-color" content="#121318" media="(prefers-color-scheme: dark)" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content="Krzysztof Pytka" />
+		<meta property="og:locale" content="en_GB" />
+		<meta property="og:title" content="Krzysztof Pytka | Lecturer in Economics, University of Edinburgh" />
+		<meta property="og:description" content="Krzysztof Pytka is a Lecturer (Assistant Professor) in Economics at the University of Edinburgh. Research on household heterogeneity, consumption, shopping frictions and machine learning; teaching, CV and contact." />
+		<meta property="og:url" content="https://kpytka.eu/" />
+		<meta property="og:image" content="https://kpytka.eu/images/KPytka_Edin-1200.jpg" />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="1600" />
+		<meta property="og:image:alt" content="Krzysztof Pytka at the University of Edinburgh (Old College)" />
+		<meta name="twitter:card" content="summary" />
+
+		<!-- Structured data for search engines -->
+		<script type="application/ld+json">
+		{
+		  "@context": "https://schema.org",
+		  "@graph": [
+		    {
+		      "@type": "Person",
+		      "@id": "https://kpytka.eu/#person",
+		      "name": "Krzysztof Pytka",
+		      "givenName": "Krzysztof",
+		      "familyName": "Pytka",
+		      "jobTitle": "Lecturer in Economics",
+		      "description": "Lecturer (Assistant Professor) in Economics at the University of Edinburgh. Research on household heterogeneity, consumption, shopping frictions and machine learning.",
+		      "url": "https://kpytka.eu/",
+		      "image": "https://kpytka.eu/images/KPytka_Edin-1200.jpg",
+		      "worksFor": {
+		        "@type": "CollegeOrUniversity",
+		        "name": "University of Edinburgh",
+		        "url": "https://www.ed.ac.uk/",
+		        "department": {
+		          "@type": "Organization",
+		          "name": "School of Economics, University of Edinburgh",
+		          "url": "https://www.ed.ac.uk/economics"
+		        }
+		      },
+		      "alumniOf": {
+		        "@type": "CollegeOrUniversity",
+		        "name": "European University Institute",
+		        "url": "https://www.eui.eu/"
+		      },
+		      "workLocation": {
+		        "@type": "Place",
+		        "name": "School of Economics, University of Edinburgh",
+		        "address": {
+		          "@type": "PostalAddress",
+		          "streetAddress": "31 Buccleuch Place",
+		          "addressLocality": "Edinburgh",
+		          "postalCode": "EH8 9JS",
+		          "addressCountry": "GB"
+		        }
+		      },
+		      "knowsAbout": ["Macroeconomics", "Household heterogeneity", "Consumption", "Consumer search", "Shopping frictions", "Labor economics", "Job displacement", "Machine learning", "Scanner data"],
+		      "sameAs": [
+		        "https://scholar.google.com/citations?user=mdyaDyoAAAAJ",
+		        "https://edwebprofiles.ed.ac.uk/profile/kpytka",
+		        "https://www.linkedin.com/in/kpytka/",
+		        "https://x.com/kpytka",
+		        "https://www.strava.com/athletes/33000964",
+		        "https://www.instagram.com/krzypy"
+		      ]
+		    },
+		    {
+		      "@type": "WebSite",
+		      "@id": "https://kpytka.eu/#website",
+		      "url": "https://kpytka.eu/",
+		      "name": "Krzysztof Pytka",
+		      "inLanguage": "en",
+		      "author": { "@id": "https://kpytka.eu/#person" }
+		    }
+		  ]
+		}
+		</script>
+
 		<link rel="icon" type="image/x-icon" href="favicon-edinburgh.ico" />
 		<link rel="shortcut icon" type="image/x-icon" href="favicon-edinburgh.ico" />
 		<link rel="apple-touch-icon" href="favicon-edinburgh.ico" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		
 
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&display=swap" />
+		<!-- Tiny subset (a few glyphs) of an IPA-capable typeface for the phonetic transcription -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gentium+Plus&text=%5Bk%CA%82%C9%A8%CA%82t%CC%AA%C9%94f%5D&display=swap" />
+		<link rel="stylesheet" href="assets/css/site.css" />
+		<script>document.documentElement.classList.add('js');</script>
+		<script src="assets/js/site.js" defer></script>
 	</head>
-	<body class="is-preload">
+	<body class="has-backdrop" data-backdrop="meadows">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+		<a class="skip-link" href="#main">Skip to content</a>
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<!-- <img src="images/UNI_MA_Logo_EN_RGB.png" style="height: 5rem;"> -->
-							<img src="images/Economics_white.png" style="height: 3rem;">
-						</div>
-						<div class="content">
-							<div class="inner">
-								<div style="height: 3rem; display: flex; align-items: center; justify-content: center;">
-									<h2 id="typing-name"></h2>
-									<noscript>
-										<h2>Krzysztof Pytka</h2>
-									</noscript>
-								</div>
-								<p>Lecturer in Economics</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#about">About me</a></li>
-								<li><a href="#research">Research</a></li>
-								<li><a href="#teaching">Teaching</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<li><a href="#misc">Misc.</a></li>
-								
-							</ul>
-						</nav>
+		<!-- Icon sprite -->
+		<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+			<defs>
+				<!-- Line icons -->
+				<symbol id="i-file" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></g></symbol>
+				<symbol id="i-slides" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></g></symbol>
+				<symbol id="i-bibtex" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8 3H7a2 2 0 0 0-2 2v5a2 2 0 0 1-2 2 2 2 0 0 1 2 2v5c0 1.1.9 2 2 2h1"/><path d="M16 21h1a2 2 0 0 0 2-2v-5c0-1.1.9-2 2-2a2 2 0 0 1-2-2V5a2 2 0 0 0-2-2h-1"/></g></symbol>
+				<symbol id="i-download" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></g></symbol>
+				<symbol id="i-scholar" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></g></symbol>
+				<symbol id="i-university" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="22" x2="21" y2="22"/><line x1="6" y1="18" x2="6" y2="11"/><line x1="10" y1="18" x2="10" y2="11"/><line x1="14" y1="18" x2="14" y2="11"/><line x1="18" y1="18" x2="18" y2="11"/><polygon points="12 2 20 7 4 7"/></g></symbol>
+				<symbol id="i-sound" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"/></g></symbol>
+				<symbol id="i-code" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></g></symbol>
+				<symbol id="i-pin" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></g></symbol>
+				<symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></g></symbol>
+				<symbol id="i-external" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></g></symbol>
+				<symbol id="i-map" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></g></symbol>
+				<symbol id="i-copy" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></g></symbol>
+				<symbol id="i-check" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></g></symbol>
+				<symbol id="i-chart" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="m19 9-5 5-4-4-3 3"/></g></symbol>
+				<symbol id="i-book" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></g></symbol>
+				<symbol id="i-run" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="4.5" r="2"/><path d="M5.5 11.5 9 8.5l4.5-.5 3 3.5 3.5.5"/><path d="M13.5 8 11 14l4 2.5-1 5.5"/><path d="m11 14-2 4-5 1.5"/></g></symbol>
+				<symbol id="i-close" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></g></symbol>
+				<!-- Brand marks -->
+				<symbol id="i-x" viewBox="0 0 24 24"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></symbol>
+				<symbol id="i-linkedin-in" viewBox="0 -448 448 512"><path fill="currentColor" transform="scale(1,-1)" d="M100.28 0h-92.8799v299.1h92.8799v-299.1zM53.79 339.9c-29.7002 0 -53.79 24.5996 -53.79 54.2998c0 29.6875 24.1025 53.79 53.79 53.79s53.79 -24.1025 53.79 -53.79c0 -29.7002 -24.0996 -54.2998 -53.79 -54.2998zM447.9 0h-92.6807v145.6 c0 34.7002 -0.700195 79.2002 -48.29 79.2002c-48.29 0 -55.6895 -37.7002 -55.6895 -76.7002v-148.1h-92.7803v299.1h89.0801v-40.7998h1.2998c12.4004 23.5 42.6904 48.2998 87.8799 48.2998c94 0 111.28 -61.8994 111.28 -142.3v-164.3h-0.0996094z"/></symbol>
+				<symbol id="i-youtube" viewBox="0 -448 576 512"><path fill="currentColor" transform="scale(1,-1)" d="M549.655 323.917c11.4121 -42.8672 11.4121 -132.305 11.4121 -132.305s0 -89.4385 -11.4121 -132.306c-6.28125 -23.6494 -24.7871 -41.5 -48.2842 -47.8203c-42.5908 -11.4863 -213.371 -11.4863 -213.371 -11.4863s-170.78 0 -213.371 11.4863 c-23.4971 6.32031 -42.0029 24.1709 -48.2842 47.8203c-11.4121 42.8672 -11.4121 132.306 -11.4121 132.306s0 89.4375 11.4121 132.305c6.28125 23.6504 24.7871 42.2754 48.2842 48.5967c42.5908 11.4863 213.371 11.4863 213.371 11.4863s170.781 0 213.371 -11.4863 c23.4971 -6.32031 42.0029 -24.9463 48.2842 -48.5967zM232.145 110.409l142.739 81.2012l-142.739 81.2051v-162.406z"/></symbol>
+				<symbol id="i-instagram" viewBox="0 -448 448 512"><path fill="currentColor" transform="scale(1,-1)" d="M224.1 307c63.6006 0 114.9 -51.2998 114.9 -114.9c0 -63.5996 -51.2998 -114.899 -114.9 -114.899c-63.5996 0 -114.899 51.2998 -114.899 114.899c0 63.6006 51.2998 114.9 114.899 114.9zM224.1 117.4c41.1006 0 74.7002 33.5 74.7002 74.6992 c0 41.2002 -33.5 74.7002 -74.7002 74.7002c-41.1992 0 -74.6992 -33.5 -74.6992 -74.7002c0 -41.1992 33.5996 -74.6992 74.6992 -74.6992zM370.5 311.7c0 -14.9004 -12 -26.7998 -26.7998 -26.7998c-14.9004 0 -26.7998 12 -26.7998 26.7998s12 26.7998 26.7998 26.7998 s26.7998 -12 26.7998 -26.7998zM446.6 284.5c2.10059 -37 2.10059 -147.8 0 -184.8c-1.7998 -35.9004 -10 -67.7002 -36.1992 -93.9004c-26.2002 -26.2998 -58 -34.5 -93.9004 -36.2002c-37 -2.09961 -147.9 -2.09961 -184.9 0 c-35.8994 1.80078 -67.5996 10 -93.8994 36.2002s-34.5 58 -36.2002 93.9004c-2.09961 37 -2.09961 147.899 0 184.899c1.7998 35.9004 9.90039 67.7002 36.2002 93.9004s58.0996 34.4004 93.8994 36.0996c37 2.10059 147.9 2.10059 184.9 0 c35.9004 -1.7998 67.7002 -10 93.9004 -36.1992c26.2998 -26.2002 34.5 -58 36.1992 -93.9004zM398.8 60c11.7002 29.4004 9 99.5 9 132.1c0 32.6006 2.7002 102.601 -9 132.101c-7.89941 19.7002 -23 34.7998 -42.5996 42.5996c-29.4004 11.6006 -99.5 9 -132.101 9 c-32.5996 0 -102.6 2.7002 -132.1 -9c-19.7002 -7.89941 -34.7998 -23 -42.5996 -42.5996c-11.6006 -29.4004 -9 -99.5 -9 -132.101c0 -32.5996 -2.7002 -102.6 9 -132.1c7.89941 -19.7002 23 -34.7998 42.5996 -42.5996c29.4004 -11.6006 99.5 -9 132.1 -9 c32.6006 0 102.601 -2.7002 132.101 9c19.7002 7.89941 34.7998 23 42.5996 42.5996z"/></symbol>
+				<symbol id="i-strava" viewBox="0 -448 384 512"><path fill="currentColor" transform="scale(1,-1)" d="M158.4 448l150.199 -292h-88.5l-61.6992 116.1l-62.2002 -116.1h-89.2002zM308.6 156h67.6006l-111.5 -220l-112.2 220h67.5996l44.6006 -88.2002z"/></symbol>
+			</defs>
+		</svg>
+
+		<!-- Header -->
+		<header class="site-header" id="top">
+			<div class="container site-header__inner">
+				<a class="brand" href="#top">
+					<picture>
+						<source media="(max-width: 739px)" srcset="images/Economics_crest_white.png" />
+						<img class="brand__logo" src="images/Economics_white.png" alt="The University of Edinburgh, School of Economics" width="1548" height="354" />
+					</picture>
+					<span class="brand__name"><span class="brand__full">Krzysztof Pytka</span><span class="brand__short">K. Pytka</span></span>
+				</a>
+				<nav class="site-nav" aria-label="Sections">
+					<ul>
+						<li><a href="#about">About me</a></li>
+						<li><a href="#research">Research</a></li>
+						<li><a href="#teaching">Teaching</a></li>
+						<li><a href="#contact">Contact</a></li>
+						<li><a href="#misc">Misc.</a></li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main id="main">
+
+			<!-- ABOUT -->
+			<section id="about" class="hero">
+				<!-- Masthead photo. Choose it with data-backdrop="calton" (Calton Hill at dusk) or
+				     data-backdrop="meadows" (The Meadows at sunset) on <body>. Remove the "has-backdrop"
+				     class from <body> to show no photo at all. -->
+				<picture class="hero__backdrop hero__backdrop--calton" aria-hidden="true">
+					<source type="image/webp" srcset="images/bg_calton_dusk-1200.webp 1200w, images/bg_calton_dusk-1800.webp 1800w, images/bg_calton_dusk-2600.webp 2600w" sizes="100vw" />
+					<img src="images/bg_calton_dusk-1800.jpg" srcset="images/bg_calton_dusk-1200.jpg 1200w, images/bg_calton_dusk-1800.jpg 1800w, images/bg_calton_dusk-2600.jpg 2600w" sizes="100vw" width="1800" height="685" alt="" loading="lazy" decoding="async" />
+				</picture>
+				<picture class="hero__backdrop hero__backdrop--meadows" aria-hidden="true">
+					<source type="image/webp" srcset="images/bg_meadows_dusk-1200.webp 1200w, images/bg_meadows_dusk-1600.webp 1600w, images/bg_meadows_dusk-2016.webp 2016w" sizes="100vw" />
+					<img src="images/bg_meadows_dusk-1600.jpg" srcset="images/bg_meadows_dusk-1200.jpg 1200w, images/bg_meadows_dusk-1600.jpg 1600w, images/bg_meadows_dusk-2016.jpg 2016w" sizes="100vw" width="1600" height="744" alt="" loading="lazy" decoding="async" />
+				</picture>
+				<div class="container hero__grid">
+					<div class="hero__intro">
+						<p class="hero__greeting">Cześć!<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=0ghsW17GIQU" aria-label="Hear it pronounced" title="Hear it pronounced"><svg class="icon" aria-hidden="true"><use href="#i-sound"></use></svg></a></p>
+						<h1 class="hero__name"><span class="visually-hidden">Krzysztof Pytka</span><span id="typing-name" aria-hidden="true"></span><span class="hero__caret" aria-hidden="true"></span><noscript>Krzysztof Pytka</noscript></h1>
+						<p class="hero__role">Lecturer in Economics</p>
+						<p class="hero__affiliation"><a target="_blank" rel="noopener noreferrer" href="https://www.ed.ac.uk/economics">University of Edinburgh</a><span class="hero__affiliation-sep" aria-hidden="true">·</span><span class="hero__school">School of Economics</span></p>
+					</div>
+
+					<div class="hero__body">
+						<p class="lede">
+							I am a <strong>Lecturer (Assistant Professor)</strong> in <strong>Economics</strong> at
+							the <a target="_blank" rel="noopener noreferrer" href='https://www.ed.ac.uk/economics'>University of Edinburgh</a>. I completed my Ph.D. at the <a target="_blank" rel="noopener noreferrer" href="https://www.eui.eu/en/academic-units/department-of-economics">European University Institute</a> in Florence, Italy. Before joining Edinburgh, I worked at the <a target="_blank" rel="noopener noreferrer" href='https://www.vwl.uni-mannheim.de'>University of Mannheim</a>, Germany.
+						</p>
+
+						<p class="hero__focus">
+							My research focuses on how <strong>differences across households</strong> and <strong>frictions in retail markets</strong> shape household decisions and, ultimately, macroeconomic outcomes. To study these dynamics, I combine <strong>large-scale microeconomic data</strong> with a <strong>macroeconomic perspective</strong>, using <strong>structural modeling</strong> and <strong>machine learning techniques</strong>.
+						</p>
+
+						<ul class="actions">
+							<li><a target="_blank" rel="noopener noreferrer" href='https://www.kpytka.eu/CV.pdf' class="btn btn--primary"><svg class="icon" aria-hidden="true"><use href="#i-download"></use></svg> Download CV</a></li>
+							<li><a target="_blank" rel="me noopener noreferrer" href='https://scholar.google.com/citations?user=mdyaDyoAAAAJ&hl=pl&oi=sra' class="btn"><svg class="icon" aria-hidden="true"><use href="#i-scholar"></use></svg> Google Scholar</a></li>
+							<li><a target="_blank" rel="noopener noreferrer" href='https://edwebprofiles.ed.ac.uk/profile/kpytka' class="btn"><svg class="icon" aria-hidden="true"><use href="#i-university"></use></svg> University Profile</a></li>
+						</ul>
+
+						<p class="hero__note">Yes, there are not many vowels in my name. In Polish it is <span class="ipa" translate="no">[kʂɨʂt̪ɔf]</span> <a target="_blank" rel="noopener noreferrer" href="http://upload.wikimedia.org/wikipedia/commons/c/c1/Pl-Krzysztof.ogg" aria-label="Listen to the Polish pronunciation" title="Listen to the Polish pronunciation"><svg class="icon" aria-hidden="true"><use href="#i-sound"></use></svg></a>, the easy way is <span class="hero__say">KSHISH-tof</span>, and <em>Christoph</em> is totally fine with me.</p>
+
+						<!-- I specialize in Macroeconomics, in particular in 1. inequality; 2. consumption; and 3. (price) search theory.
+						My technical interests also cover computational economics and (applied) statistical learning. -->
+					</div>
+
+					<figure class="hero__portrait">
+						<!-- <img src="./images/KPytka_bike.jpg" alt="Krzysztof Pytka and Kuki-Muki on a bike ride"/> -->
+						<picture>
+							<source type="image/webp" srcset="images/KPytka_Edin-800.webp 800w, images/KPytka_Edin-1200.webp 1200w" sizes="(min-width: 740px) 346px, 286px" />
+							<img src="images/KPytka_Edin-800.jpg" srcset="images/KPytka_Edin-800.jpg 800w, images/KPytka_Edin-1200.jpg 1200w" sizes="(min-width: 740px) 346px, 286px" width="800" height="1066" alt="Krzysztof Pytka at the University of Edinburgh (Old College)" fetchpriority="high" />
+						</picture>
+					</figure>
+				</div>
+			</section>
+
+			<!-- RESEARCH -->
+			<section id="research" class="section">
+				<div class="container section__grid">
+					<header class="section__head">
+						<h2 class="section__title"><span class="section__title-end">Research <svg class="icon" aria-hidden="true"><use href="#i-chart"></use></svg></span></h2>
 					</header>
 
-				<!-- Main -->
-					<div id="main">
+					<div class="section__body">
+						<ul class="papers">
 
-						<!-- ABOUT -->						
-							<article id="about">
-								<h2 class="major">Cześć!<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=0ghsW17GIQU" style="text-decoration: none; font-size: 0.8em; margin-left: 0.5rem;"><i class="fas fa-volume-up"></i></a></h2>
+							<!-- Paper 1 -->
+							<li class="paper reveal">
+								<h3 class="paper__title">Looking into the Consumption Black Box: Evidence from Scanner Data</h3>
+								<p class="paper__authors">(jointly with Daniel Runge)</p>
+								<ul class="chips">
+									<li><a class="chip" target="_blank" rel="noopener noreferrer" href='https://kpytka.github.io/Looking_into_the_Consumption_Black_Box.pdf'><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg>PDF</a></li>
+									<li><a class="chip" target="_blank" rel="noopener noreferrer" href='https://kpytka.github.io/Looking_into_the_Consumption_Black_Box___Slides__Edinburgh_2025.pdf'><svg class="icon" aria-hidden="true"><use href="#i-slides"></use></svg>120min Slides</a></li>
+									<li><a class="chip" href="#" data-bibtex="bibtex-1" onclick="showBibtex('bibtex-1'); return false;"><svg class="icon" aria-hidden="true"><use href="#i-bibtex"></use></svg>BibTeX</a></li>
+								</ul>
+								<p class="paper__abstract">
+									This paper examines the heterogeneity and persistence of household non-durable consumption. We address three questions:
+									(i) Do different consumer groups buy different products?
+									(ii) How persistent are individual choices?
+									(iii) What are the implications for structural models?
+									We find minimal differences in basket composition between rich and
+									poor households and high individual instability,
+									with only 38% of products repurchased annually.
+									To explain this, we propose a "shopping spree" model where
+									products are perfect substitutes and baskets result from random sampling. Our findings serve as a cautionary note for structural models that emphasize product
+									and consumer sorting.
+								</p>
+							</li>
 
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="intro-text">
-                        I am a <strong>Lecturer (Assistant Professor)</strong> in <strong>Economics</strong> at 
-                        the <a target="_blank" rel="noopener noreferrer" href='https://www.ed.ac.uk/economics'>University of Edinburgh</a>. I completed my Ph.D. at the <a target="_blank" rel="noopener noreferrer" href="https://www.eui.eu/en/academic-units/department-of-economics">European University Institute</a> in Florence, Italy. Before joining Edinburgh, I worked at the <a target="_blank" rel="noopener noreferrer" href='https://www.vwl.uni-mannheim.de'>University of Mannheim</a>.
-                    </p>
-                    
-                                         <p class="research-focus">
-                         My research focuses on how <strong>differences across households</strong> and <strong>frictions in retail markets</strong> shape household decisions and, ultimately, macroeconomic outcomes. To study these dynamics, I combine <strong>large-scale microeconomic data</strong> with a <strong>macroeconomic perspective</strong>, using <strong>structural modeling</strong> and <strong>machine learning techniques</strong>.
-                     </p>
-                    
-                    <ul class="cv-link">
-                        <li><a target="_blank" rel="noopener noreferrer" href='https://www.kpytka.eu/CV.pdf' class="cv-button">
-                            <i class="fas fa-download"></i> Download CV
-                        </a></li>
-                        <li><a target="_blank" rel="noopener noreferrer" href='https://scholar.google.com/citations?user=mdyaDyoAAAAJ&hl=pl&oi=sra' class="cv-button">
-                            <i class="fas fa-graduation-cap"></i> Google Scholar
-                        </a></li>
-                        <li><a target="_blank" rel="noopener noreferrer" href='https://edwebprofiles.ed.ac.uk/profile/kpytka' class="cv-button">
-                            <i class="fas fa-university"></i> University Profile
-                        </a></li>
-                    </ul>
-                </div>
-                
-                <div class="profile-image">
-                    <span class="image main">
-                        <!-- <img src="./images/KPytka_bike.jpg" alt="Krzysztof Pytka and Kuki-Muki on a bike ride"/>  -->
-                        <img src="./images/KPytka_Edin.jpg" alt="Krzysztof Pytka at the University of Edinburgh (Old College)"/> 
-                    </span>
-                    <!-- <p style="text-align: left; font-style: italic; font-size: 0.9rem; color: #666;">
-                        Me (on the right) and <a target="_blank" rel="noopener noreferrer" href="https://quipo-starlets.eu/">Kuki-Muki</a>. 
-                    </p> -->
-                </div>
-            </div>
-                   
+							<!-- Paper 2 -->
+							<li class="paper reveal">
+								<h3 class="paper__title">Shopping Frictions with Household Heterogeneity: Theory &amp; Empirics</h3>
+								<p class="paper__status"><em>Revise &amp; Resubmit at the Review of Economic Studies</em></p>
+								<ul class="chips">
+									<li><a class="chip" target="_blank" rel="noopener noreferrer" href='https://kpytka.github.io/Shopping_Frictions.pdf'><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg>PDF</a></li>
+									<li><a class="chip" target="_blank" rel="noopener noreferrer" href='https://kpytka.github.io/Hawaii_Workshop_2024.pdf'><svg class="icon" aria-hidden="true"><use href="#i-slides"></use></svg>Slides</a></li>
+									<li><a class="chip" href="#" data-bibtex="bibtex-2" onclick="showBibtex('bibtex-2'); return false;"><svg class="icon" aria-hidden="true"><use href="#i-bibtex"></use></svg>BibTeX</a></li>
+								</ul>
+								<p class="paper__abstract">
+									This paper examines the impact of price dispersion on household consumption, highlighting the role of economic status in shaping purchasing behaviors. Leveraging detailed scanner data, I document high-earning employees pay 1.5 to 7% more than lower-earning ones for the same or similar goods.
+									A causal link between income and the prices is established using the Economic Stimulus Act of 2008.
+									The findings indicate that 8 to 22% of the increase in household spending following a transitory income shock is due to higher prices paid.
+									Despite a broader variety in the consumption baskets of wealthier households, very few goods are tailored to specific income groups.
+									Integrating consumer search with the savings problem, I propose a new model to reconcile the observed patterns and quantify the impact of retail-market frictions on consumption. Counterfactual analysis shows that over two-thirds of households face higher prices due to a price externality.
+								</p>
+							</li>
 
-					
-                      <!-- I specialize in Macroeconomics, in particular in 1. inequality; 2. consumption; and 3. (price) search theory. 
-                      My technical interests also cover computational economics and (applied) statistical learning.  -->
-                      <!-- For some time, I've focused on incorporating -->
-                <!-- frictions in the purchasing technology into the standard incomplete markets model. -->
-                
-                
-            </p>
-			
-							</article>
-
-						<!-- misc -->
-							<article id="misc">
-								<h2 class="major">Miscellanea</h2>
-								<p> 																		
-									If you're curious about the pronunciation of my given name it goes by [kʂɨʂt̪ɔf] <a target="_blank" rel="noopener noreferrer" style='text-decoration:none;'
-                                    href="http://upload.wikimedia.org/wikipedia/commons/c/c1/Pl-Krzysztof.ogg"><i class="fa fa-volume-up" aria-hidden="true"></i></a>                                in IPA. But <em>Christoph</em> is totally fine with me.
+							<!-- Paper 3 -->
+							<li class="paper reveal">
+								<h3 class="paper__title">Understanding the Sources of Earnings Losses After Job Displacement: A Machine-Learning Approach</h3>
+								<p class="paper__authors">(jointly with <a target="_blank" rel="noopener noreferrer" href='https://sites.google.com/site/andreasgulyas/home?authuser=0'>Andreas Gulyas</a>)</p>
+								<p class="paper__status"><em>Accepted at <i>the Journal of Labor Economics</i></em></p>
+								<ul class="chips">
+									<li><a class="chip" target="_blank" rel="noopener noreferrer" href='https://kpytka.github.io/Understanding_the_Sources_of_Earnings_Losses.pdf'><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg>PDF</a></li>
+									<li><a class="chip" href="#" data-bibtex="bibtex-3" onclick="showBibtex('bibtex-3'); return false;"><svg class="icon" aria-hidden="true"><use href="#i-bibtex"></use></svg>BibTeX</a></li>
+									<!-- <span class="new-version">(new version!)</span> -->
+								</ul>
+								<p class="paper__abstract">
+									Using generalized random forests in a difference-in-differences framework, we analyze heterogeneity in earnings losses following job displacement. We find substantial variation in short-term losses ranging 20-70%. While all workers face long-term losses, employment rather than wage changes primarily drives heterogeneity. The most important predictor for employment losses is worker's age, while the firm wage premium is the most important one for wage losses.
+									We predict similar loss patterns for the population excluded by the typical sample restrictions in the literature.
+									We further show how to create simple decision rules to target active labor market programs to high-loss individuals.
 								</p>
 
-								<div class="social-row">
-									<span>For the obligatory professional trail:</span>
-									<ul class="social-list">
+								<div class="paper__extra">
+									<h4 class="label">Additional Resources:</h4>
+									<ul>
 										<li>
-											<a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/kpytka/">
-												<i class="fab fa-linkedin-in"></i> LinkedIn
-											</a>
+											<span>General-audience presentation about using the GRF for estimation of heterogeneous treatment effects.</span>
+											<a class="chip" target="_blank" rel="noopener noreferrer" href='https://www.dropbox.com/s/l1sopqmqljo651y/KPytka_SPP.pdf?dl=0'><svg class="icon" aria-hidden="true"><use href="#i-slides"></use></svg>Slides</a>
 										</li>
 										<li>
-											<a target="_blank" rel="noopener noreferrer" href="https://x.com/kpytka">
-												<i class="fab fa-twitter"></i> X
-											</a>
+											<span>Presentation about using the GRF in business analytics.</span>
+											<a class="chip" target="_blank" rel="noopener noreferrer" href='https://www.dropbox.com/s/01r1hzi9wuoif2m/McKinsey_grf.pdf?dl=0'><svg class="icon" aria-hidden="true"><use href="#i-slides"></use></svg>Slides</a>
 										</li>
 									</ul>
 								</div>
+							</li>
 
-								<div class="social-row">
-									<span>For everything else:</span>
-									<ul class="social-list">
-										<li>
-											<a target="_blank" rel="noopener noreferrer" href="https://www.strava.com/athletes/33000964">
-												<i class="fab fa-strava"></i> Strava
-											</a>
-										</li>
-										<li>
-											<a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/krzypy">
-												<i class="fab fa-instagram"></i> Instagram
-											</a>
-										</li>
-									</ul>
-								</div>
-
-								<img src="./images/KPytka_bike.jpg" alt="Krzysztof Pytka and Kuki-Muki on a bike ride" style="max-width: 100%; height: auto; display: block;"/>
-								<p style="text-align: left; font-style: italic; font-size: 0.9rem; color: rgba(255,255,255,0.55);">
-									Me (on the right) and <a target="_blank" rel="noopener noreferrer" href="https://quipo-starlets.eu/">Kuki-Muki</a>.
+							<!-- Paper 4 -->
+							<li class="paper reveal">
+								<h3 class="paper__title">The Consequences of the Covid-19 Job Losses: Who Will Suffer Most and by How Much?</h3>
+								<p class="paper__authors">(jointly with <a target="_blank" rel="noopener noreferrer" href='https://sites.google.com/site/andreasgulyas/home?authuser=0'>Andreas Gulyas</a>)</p>
+								<p class="paper__status"><em>CEPR Covid Economics (47)</em></p>
+								<ul class="chips">
+									<li><a class="chip" target="_blank" rel="noopener noreferrer" href='https://www.dropbox.com/s/mw87g0bz56mvu8a/GulyasPytka_covid.pdf?dl=0'><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg>PDF</a></li>
+									<li><a class="chip" href="#" data-bibtex="bibtex-4" onclick="showBibtex('bibtex-4'); return false;"><svg class="icon" aria-hidden="true"><use href="#i-bibtex"></use></svg>BibTeX</a></li>
+								</ul>
+								<p class="paper__abstract">
+									Using the universe of Austrian unemployment insurance records until May 2020, we document that the composition of UI claimants during the Covid-19 outbreak is substantially different compared to past times. Using a machine-learning algorithm from Gulyas and Pytka (2020), we identify individual earnings losses conditional on worker and job characteristics.
+									Covid-19-related job terminations are associated with lower losses in earnings and wages compared to the Great Recession, but similar employment losses. We further derive an accurate but simple policy rule targeting individuals vulnerable to long-term wage losses.
 								</p>
-								<!-- <p>
-									In my free time, I enjoy going on <a target="_blank" rel="noopener noreferrer" href="https://strava.app.link/9g1S6ElmdMb">bike rides</a> around the scenic villages near Mannheim (and beyond). 
-								</p> -->
+							</li>
+						</ul>
 
-							</article>
-
-						<!-- About -->
-							<!-- <article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
-							</article> -->
-
-						<!-- Research -->						 
-						<article id="research">
-							<h2 class='major'>Research</h2>
-							
-							<div class="research-papers">
-								<!-- Paper 1 -->
-								<div class="paper-item">
-									<h3> Looking into the Consumption Black Box: Evidence from Scanner Data</h3>
-									<p class="coauthors">(jointly with Daniel Runge)</p>
-									
-									<div class="paper-links">
-										<a target="_blank" rel="noopener noreferrer" href='https://kpytka.github.io/Looking_into_the_Consumption_Black_Box.pdf'>
-											<i class="far fa-file-pdf"></i> [PDF]
-										</a>
-										<a target="_blank" rel="noopener noreferrer" href='https://kpytka.github.io/Looking_into_the_Consumption_Black_Box___Slides__Edinburgh_2025.pdf'>
-											<i class="fas fa-chart-pie"></i> [120min Slides]
-										</a>
-										<a href="#" onclick="showBibtex('bibtex-1'); return false;">
-											<i class="fas fa-quote-left"></i> [BibTeX]
-										</a>
-									</div>
-									
-									<div class="paper-abstract">
-										This paper examines the heterogeneity and persistence of household non-durable consumption. We address three questions: 
-										(i) Do different consumer groups buy different products? 
-										(ii) How persistent are individual choices?
-										(iii) What are the implications for structural models? 
-										We find minimal differences in basket composition between rich and 
-										poor households and high individual instability, 
-										with only 38% of products repurchased annually. 
-										To explain this, we propose a "shopping spree" model where 
-										products are perfect substitutes and baskets result from random sampling. Our findings serve as a cautionary note for structural models that emphasize product
-										and consumer sorting.
-									</div>
-								</div>
-
-								<!-- Paper 2 -->
-								<div class="paper-item">
-									<h3> Shopping Frictions with Household Heterogeneity: Theory & Empirics</h3>
-									
-									<div class="paper-links">
-										<a target="_blank" rel="noopener noreferrer" href='https://kpytka.github.io/Shopping_Frictions.pdf'>
-											<i class="far fa-file-pdf"></i> [PDF]
-										</a>
-										<a target="_blank" rel="noopener noreferrer" href='https://kpytka.github.io/Hawaii_Workshop_2024.pdf'>
-											<i class="fas fa-chart-pie"></i> [Slides]
-										</a>
-										<a href="#" onclick="showBibtex('bibtex-2'); return false;">
-											<i class="fas fa-quote-left"></i> [BibTeX]
-										</a>
-									</div>
-									
-									<div class="paper-status">
-										<em>Revise & Resubmit at the Review of Economic Studies</em>
-									</div>
-									
-									<div class="paper-abstract">
-										This paper examines the impact of price dispersion on household consumption, highlighting the role of economic status in shaping purchasing behaviors. Leveraging detailed scanner data, I document high-earning employees pay 1.5 to 7% more than lower-earning ones for the same or similar goods. 
-										A causal link between income and the prices is established using the Economic Stimulus Act of 2008. 
-										The findings indicate that 8 to 22% of the increase in household spending following a transitory income shock is due to higher prices paid.                        
-										Despite a broader variety in the consumption baskets of wealthier households, very few goods are tailored to specific income groups.
-										Integrating consumer search with the savings problem, I propose a new model to reconcile the observed patterns and quantify the impact of retail-market frictions on consumption. Counterfactual analysis shows that over two-thirds of households face higher prices due to a price externality.
-									</div>
-								</div>
-
-								<!-- Paper 3 -->
-								<div class="paper-item">
-									<h3> Understanding the Sources of Earnings Losses After Job Displacement: A Machine-Learning Approach</h3>
-									<p class="coauthors">(jointly with <a href='https://sites.google.com/site/andreasgulyas/home?authuser=0'>Andreas Gulyas</a>)</p>
-									
-									<div class="paper-links">
-										<a target="_blank" rel="noopener noreferrer" href='https://kpytka.github.io/Understanding_the_Sources_of_Earnings_Losses.pdf'>
-											<i class="far fa-file-pdf"></i> [PDF]
-										</a>
-										<a href="#" onclick="showBibtex('bibtex-3'); return false;">
-											<i class="fas fa-quote-left"></i> [BibTeX]
-										</a>
-										<!-- <span class="new-version">(new version!)</span> -->
-									</div>
-									
-									<div class="paper-status">
-										<em>Accepted at <i>the Journal of Labor Economics</i></em>
-									</div>
-									
-									<div class="paper-abstract">
-										Using generalized random forests in a difference-in-differences framework, we analyze heterogeneity in earnings losses following job displacement. We find substantial variation in short-term losses ranging 20-70%. While all workers face long-term losses, employment rather than wage changes primarily drives heterogeneity. The most important predictor for employment losses is worker's age, while the firm wage premium is the most important one for wage losses. 
-										We predict similar loss patterns for the population excluded by the typical sample restrictions in the literature. 
-										We further show how to create simple decision rules to target active labor market programs to high-loss individuals.
-									</div>
-									
-									<div class="additional-resources">
-										<h4>Additional Resources:</h4>
-										<ul>
-											<li>General-audience presentation about using the GRF for estimation of heterogeneous treatment effects. 
-												<a target="_blank" rel="noopener noreferrer" href='https://www.dropbox.com/s/l1sopqmqljo651y/KPytka_SPP.pdf?dl=0'>
-													<i class="fas fa-chart-pie"></i> [Slides]
-												</a>
-											</li>
-											<li>Presentation about using the GRF in business analytics. 
-												<a target="_blank" rel="noopener noreferrer" href='https://www.dropbox.com/s/01r1hzi9wuoif2m/McKinsey_grf.pdf?dl=0'>
-													<i class="fas fa-chart-pie"></i> [Slides]
-												</a>
-											</li>
-										</ul>
-									</div>
-								</div>
-
-								<!-- Paper 4 -->
-								<div class="paper-item">
-									<h3> The Consequences of the Covid-19 Job Losses: Who Will Suffer Most and by How Much?</h3>
-									<p class="coauthors">(jointly with <a target="_blank" rel="noopener noreferrer" href='https://sites.google.com/site/andreasgulyas/home?authuser=0'>Andreas Gulyas</a>)</p>
-									
-									<div class="paper-links">
-										<a target="_blank" rel="noopener noreferrer" href='https://www.dropbox.com/s/mw87g0bz56mvu8a/GulyasPytka_covid.pdf?dl=0'>
-											<i class="far fa-file-pdf"></i> [PDF]
-										</a>
-										<a href="#" onclick="showBibtex('bibtex-4'); return false;">
-											<i class="fas fa-quote-left"></i> [BibTeX]
-										</a>
-									</div>
-									
-									<div class="paper-status">
-										<em>CEPR Covid Economics (47)</em>
-									</div>
-									
-									<div class="paper-abstract">
-										Using the universe of Austrian unemployment insurance records until May 2020, we document that the composition of UI claimants during the Covid-19 outbreak is substantially different compared to past times. Using a machine-learning algorithm from Gulyas and Pytka (2020), we identify individual earnings losses conditional on worker and job characteristics.
-										Covid-19-related job terminations are associated with lower losses in earnings and wages compared to the Great Recession, but similar employment losses. We further derive an accurate but simple policy rule targeting individuals vulnerable to long-term wage losses.
-									</div>
-								</div>
-							</div>
-							
-
-							
-							<!-- Hidden BibTeX content -->
-							<div id="bibtex-1" style="display: none;">
-								<pre>@article{pytka_runge_2025,
+						<!-- Hidden BibTeX content -->
+						<div id="bibtex-1" hidden>
+							<pre>@article{pytka_runge_2025,
   title={Looking into the Consumption Black Box: Evidence from Scanner Data},
   author={Krzysztof Pytka and Daniel Runge},
   year={2025},
   note={Working Paper},
   nameorder = {random}
 }</pre>
-							</div>
-							
-							<div id="bibtex-2" style="display: none;">
-								<pre>@article{pytka_2024,
+						</div>
+
+						<div id="bibtex-2" hidden>
+							<pre>@article{pytka_2024,
   title={Shopping Frictions with Household Heterogeneity: Theory & Empirics},
   author={Krzysztof Pytka},
   year={2024}
-  
+
 }</pre>
-							</div>
-							
-							<div id="bibtex-3" style="display: none;">
-								<pre>@article{gulyas_pytka_2025,
+						</div>
+
+						<div id="bibtex-3" hidden>
+							<pre>@article{gulyas_pytka_2025,
   title={Understanding the Sources of Earnings Losses After Job Displacement: A Machine-Learning Approach},
   author={Andreas Gulyas and Krzysztof Pytka},
   journal={Journal of Labor Economics},
   year={2025}
-  
+
 }</pre>
-							</div>
-							
-							<div id="bibtex-4" style="display: none;">
-								<pre>@article{gulyas_pytka_2020,
+						</div>
+
+						<div id="bibtex-4" hidden>
+							<pre>@article{gulyas_pytka_2020,
   title={The Consequences of the Covid-19 Job Losses: Who Will Suffer Most and by How Much?},
   author={Andreas Gulyas and Krzysztof Pytka},
   journal={CEPR Covid Economics},
   volume={47},
   year={2020}
 }</pre>
-							</div>
-						</article>
+						</div>
+					</div>
+				</div>
+			</section>
 
-						<!-- Teaching -->
-						 <article id="teaching">
+			<!-- TEACHING -->
+			<section id="teaching" class="section">
+				<div class="container section__grid">
+					<header class="section__head">
+						<h2 class="section__title"><span class="section__title-end">Teaching <svg class="icon" aria-hidden="true"><use href="#i-book"></use></svg></span></h2>
+					</header>
 
-						<h2 class="major">Teaching</h2>
-						
-						<div class="paper-item" style="margin-bottom: 2rem;">
-							<h3>Courses at Mannheim</h3>
-							<p>I'm proud to teach a wide range of courses at Mannheim, working with talented students across different levels and backgrounds.</p>
-							
-							<div class="paper-abstract">
-								<strong>1. Quantitative Macroeconomics with Heterogeneous Households</strong>
-								<p class="coauthors">[Ph.D. course]</p>
-								<div class="paper-links" style="margin-top: 0.5rem;">
-									<a target="_blank" rel="noopener noreferrer" href="https://elated-visvesvaraya-fe756f.netlify.app/intro.html">
-										<i class="fas fa-code"></i> [Julia Tutorial]
-									</a>
-								</div>
-							</div>
-							
-							<div class="paper-abstract">
-								<strong>2. Advanced Macroeconomics</strong>
-								<p class="coauthors">[M.Sc. course]</p>
-							</div>
-							
-							<div class="paper-abstract">
-								<strong>3. Introduction to Predictive Analytics and Machine Learning in <code>R</code></strong>
-								<p class="coauthors">[B.A. + M.Sc. block seminar]</p>
-								<div class="paper-links" style="margin-top: 0.5rem;">
-									<a target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=rgf9wFdUdVU&list=PLiP3SpUod5Blbuy0UZwjiE8uip2yQaBCz">
-										<i class="fab fa-youtube"></i> [Prerecorded Materials]
-									</a>
-								</div>
-							</div>
+					<div class="section__body blocks">
+
+						<div class="block reveal">
+							<h3 class="block__title">Courses at Edinburgh</h3>
+							<p class="block__text">At Edinburgh I teach:</p>
+
+							<ul class="courses">
+								<li class="course">
+									<h4 class="course__title"><strong>1. Programming and Numerical Methods for Economics</strong></h4>
+									<p class="course__level">Honours course</p>
+								</li>
+								<li class="course">
+									<h4 class="course__title"><strong>2. Consumption and Saving</strong></h4>
+									<p class="course__subtitle">Where Micro Behaviour Meets Macroeconomic Policy</p>
+									<p class="course__level">Honours course · starting Spring 2027</p>
+									<ul class="chips">
+										<li><a class="chip" target="_blank" rel="noopener noreferrer" href="Consumption_Elective.pdf"><svg class="icon" aria-hidden="true"><use href="#i-file"></use></svg>Syllabus</a></li>
+									</ul>
+								</li>
+							</ul>
 						</div>
 
-								
-					<div class="paper-item">
-						
-							<h3>Featured Interview</h3>							
-							<p style="margin-bottom: 1rem;">
-								I talk about how big data and machine learning are changing the way we do economic research, what it's like to teach at Mannheim, and how I tinker with a <a href="https://www.raspberrypi.com/">Raspberry Pi</a> to generate valuation reports for my own investment portfolio.
-							</p>
-							<div class="paper-links">
-								<a target="_blank" href="https://www.youtube.com/watch?v=dU08310Oui4&list=PLuO11kePfhzShhnEr8eGPbRpwYr8H2B_Y&index=4" rel="noopener noreferrer" href="#">
-									<i class="fab fa-youtube"></i> [VWL Lounge Interview]
-								</a>
-							</div>
-						
-					</div>	
+						<div class="block reveal">
+							<h3 class="block__title">Courses at Mannheim</h3>
+							<p class="block__text">At Mannheim I taught a wide range of courses, working with students across different levels and backgrounds.</p>
 
-						<div class="paper-item" style="margin-top: 2rem;">
-							<h3>Student Feedback</h3>
-							<p>I'm grateful for the thoughtful feedback I've received from my students over the years:</p>
-							
-							<div class="paper-abstract">
-								<blockquote>
+							<ul class="courses">
+								<li class="course">
+									<h4 class="course__title"><strong>1. Quantitative Macroeconomics with Heterogeneous Households</strong></h4>
+									<p class="course__level">Ph.D. course</p>
+									<ul class="chips">
+										<li><a class="chip" target="_blank" rel="noopener noreferrer" href="https://elated-visvesvaraya-fe756f.netlify.app/intro.html"><svg class="icon" aria-hidden="true"><use href="#i-code"></use></svg>Julia Tutorial</a></li>
+									</ul>
+								</li>
+								<li class="course">
+									<h4 class="course__title"><strong>2. Advanced Macroeconomics</strong></h4>
+									<p class="course__level">M.Sc. course</p>
+								</li>
+								<li class="course">
+									<h4 class="course__title"><strong>3. Introduction to Predictive Analytics and Machine Learning in <code>R</code></strong></h4>
+									<p class="course__level">B.A. + M.Sc. block seminar</p>
+									<ul class="chips">
+										<li><a class="chip" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=rgf9wFdUdVU&list=PLiP3SpUod5Blbuy0UZwjiE8uip2yQaBCz"><svg class="icon" aria-hidden="true"><use href="#i-youtube"></use></svg>Prerecorded Materials</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+
+						<div class="block reveal">
+							<h3 class="block__title">Featured Interview</h3>
+							<p class="block__text">
+								I talk about how big data and machine learning are changing the way we do economic research, what it was like to teach at Mannheim, and how I tinker with a <a href="https://www.raspberrypi.com/">Raspberry Pi</a> to generate valuation reports for my own investment portfolio.
+							</p>
+							<ul class="chips">
+								<li><a class="chip" target="_blank" rel="noopener noreferrer" href="https://www.youtube.com/watch?v=dU08310Oui4&list=PLuO11kePfhzShhnEr8eGPbRpwYr8H2B_Y&index=4"><svg class="icon" aria-hidden="true"><use href="#i-youtube"></use></svg>VWL Lounge Interview</a></li>
+							</ul>
+						</div>
+
+						<div class="block reveal">
+							<h3 class="block__title">Student Feedback</h3>
+							<p class="block__text">I'm grateful for the thoughtful feedback I've received from my students over the years:</p>
+
+							<div class="quotes">
+								<blockquote class="quote">
 									"Very entertaining lectures and a sympathetic Professor. You were always very interested that we learn something and understand everything... Furthermore it was never boring to listen to your lectures. I could easily handle listening for 90 minutes without even looking at my mobile phone."
 								</blockquote>
-
-								<blockquote>
+								<blockquote class="quote">
 									"Different from all other courses we have this semester, the instructor really makes efforts to bring the theory to life using examples/adding stories from real life. They really help to understand material, connect everything in one's head."
 								</blockquote>
-								
-								<blockquote>
+								<blockquote class="quote">
 									"I love this course—definitely my favorite. Very interesting, nice and varied, good evaluation style, really feel like I learned a lot and enjoyed class."
 								</blockquote>
-								<blockquote>
+								<blockquote class="quote">
 									"Overall this course was the best in the first Master semester. Prof. Pytka gave really good intuitions for the calculations and explained difficult topics in an understandable manner."
 								</blockquote>
-								<blockquote>
+								<blockquote class="quote">
 									"Out of all the 3 subjects, Macroeconomics is the only one that I am quite comfortable with and this is only because of Professor Pytka."
 								</blockquote>
 							</div>
 						</div>
-						</article>
-
-
-
-
-						<!-- Contact -->
-							
-								<article id="contact">
-									<h2 class="major">How to reach me <i class="fa fa-map-o" aria-hidden="true"></i></h2>
-
-									
-									
-
-										<!-- <address> -->
-										<p>
-											<i class="fas fa-map-marker-alt" style="margin-right: 0.5rem;"></i>
-											<a target="_blank" rel="noopener noreferrer"  href='https://www.ed.ac.uk/economics'>School of Economics</a>
-											<br><span style="margin-left: 1.5rem;">University of Edinburgh</span>
-											<br><span style="margin-left: 1.5rem;">31 Buccleuch Place</span>
-											<br><span style="margin-left: 1.5rem;">Office 3.01</span>
-											<br><span style="margin-left: 1.5rem;">EH8 9JS, Edinburgh</span>
-									
-											<br><br><i class="fas fa-envelope" style="margin-right: 0.5rem;"></i><a href="https://mailhide.io/e/SUqPExoQ" onclick="popup=window.open('https://mailhide.io/e/SUqPExoQ','mailhidepopup','width=580,height=635'); return false;"><code>k***@ed.ac.uk</code></a>
-										</p>
-										<!-- </address> -->
-										
-										<!-- Google Maps Embed -->
-										<div style="margin-top: 2rem; text-align: center;">
-											<h3 style="margin-bottom: 1rem;">Location</h3>
-
-											<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2234.362619539787!2d-3.1885225222407056!3d55.94308667731769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c783b8c16ca3%3A0xe47294024c33a790!2sSchool%20of%20Economics!5e0!3m2!1sen!2suk!4v1770804652280!5m2!1sen!2suk" width="100%" height="300" style="border:0; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-											
-											<p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-												<a href="https://maps.app.goo.gl/bhm8For63ns3XpsK9" target="_blank" rel="noopener noreferrer">
-													<i class="fa fa-external-link"></i> Open in Google Maps
-												</a>
-											</p>
-										</div>
-								</article>
-
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
-
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
-
-								<section>
-									<h3 class="major">Lists</h3>
-
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
-
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
-
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
-
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
-
-							</article>
-
 					</div>
+				</div>
+			</section>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; K. Pytka. Template: <a href="https://html5up.net">HTML5 UP</a> (+lots of my own modifications).</p>
-					</footer>
+			<!-- CONTACT -->
+			<section id="contact" class="section">
+				<div class="container section__grid">
+					<header class="section__head">
+						<h2 class="section__title">How to <span class="section__title-end">reach me <svg class="icon" aria-hidden="true"><use href="#i-map"></use></svg></span></h2>
+					</header>
 
+					<div class="section__body contact reveal">
+						<div class="contact__details">
+							<!-- <address> -->
+							<p class="contact__item">
+								<svg class="icon" aria-hidden="true"><use href="#i-pin"></use></svg>
+								<span>
+									<a target="_blank" rel="noopener noreferrer" href='https://www.ed.ac.uk/economics'>School of Economics</a>
+									<br>University of Edinburgh
+									<br>31 Buccleuch Place
+									<br>Office 3.01
+									<br>EH8 9JS, Edinburgh
+								</span>
+							</p>
+							<p class="contact__item">
+								<svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg>
+								<span><a href="https://mailhide.io/e/SUqPExoQ" onclick="popup=window.open('https://mailhide.io/e/SUqPExoQ','mailhidepopup','width=580,height=635'); return false;"><code>k***@ed.ac.uk</code></a></span>
+							</p>
+							<!-- </address> -->
+						</div>
+
+						<!-- Google Maps Embed -->
+						<div class="contact__map">
+							<h3 class="label">Location</h3>
+							<div class="map">
+								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2234.362619539787!2d-3.1885225222407056!3d55.94308667731769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c783b8c16ca3%3A0xe47294024c33a790!2sSchool%20of%20Economics!5e0!3m2!1sen!2suk!4v1770804652280!5m2!1sen!2suk" title="Map: School of Economics, University of Edinburgh" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+							</div>
+							<p class="map-link">
+								<a href="https://maps.app.goo.gl/bhm8For63ns3XpsK9" target="_blank" rel="noopener noreferrer"><svg class="icon" aria-hidden="true"><use href="#i-external"></use></svg> Open in Google Maps</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- MISC -->
+			<section id="misc" class="section">
+				<div class="container section__grid">
+					<header class="section__head">
+						<h2 class="section__title"><span class="section__title-end">Miscellanea <svg class="icon" aria-hidden="true"><use href="#i-run"></use></svg></span></h2>
+					</header>
+
+					<div class="section__body misc reveal">
+						<div class="misc__text">
+							<div class="social-row">
+								<span class="social-row__label">For the obligatory professional trail:</span>
+								<ul class="chips">
+									<li><a class="chip" target="_blank" rel="me noopener noreferrer" href="https://www.linkedin.com/in/kpytka/"><svg class="icon" aria-hidden="true"><use href="#i-linkedin-in"></use></svg>LinkedIn</a></li>
+									<li><a class="chip" target="_blank" rel="me noopener noreferrer" href="https://x.com/kpytka"><svg class="icon" aria-hidden="true"><use href="#i-x"></use></svg>X</a></li>
+								</ul>
+							</div>
+
+							<div class="social-row">
+								<span class="social-row__label">For everything else:</span>
+								<ul class="chips">
+									<li><a class="chip" target="_blank" rel="me noopener noreferrer" href="https://www.strava.com/athletes/33000964"><svg class="icon" aria-hidden="true"><use href="#i-strava"></use></svg>Strava</a></li>
+									<li><a class="chip" target="_blank" rel="me noopener noreferrer" href="https://www.instagram.com/krzypy"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg>Instagram</a></li>
+								</ul>
+							</div>
+
+
+							<!-- <p>
+								In my free time, I enjoy going on <a target="_blank" rel="noopener noreferrer" href="https://strava.app.link/9g1S6ElmdMb">bike rides</a> around the scenic villages near Mannheim (and beyond).
+							</p> -->
+						</div>
+
+						<figure class="photo">
+							<picture>
+								<source type="image/webp" srcset="images/KPytka_bike-800.webp 800w, images/KPytka_bike-1200.webp 1200w" sizes="300px" />
+								<img src="images/KPytka_bike-800.jpg" srcset="images/KPytka_bike-800.jpg 800w, images/KPytka_bike-1200.jpg 1200w" sizes="300px" width="800" height="977" alt="Krzysztof Pytka and Kuki-Muki on a bike ride" loading="lazy" decoding="async" />
+							</picture>
+							<figcaption>Me (on the right) and <a target="_blank" rel="noopener noreferrer" href="https://quipo-starlets.eu/">Kuki-Muki</a>.</figcaption>
+						</figure>
+					</div>
+				</div>
+			</section>
+
+		</main>
+
+		<!-- Footer -->
+		<footer class="site-footer">
+			<div class="container">
+				<p class="copyright">&copy; K. Pytka.</p>
 			</div>
+		</footer>
 
-		<!-- BG -->
-			<div id="bg"></div>
+		<!-- BibTeX dialog -->
+		<dialog id="bibtex-dialog" class="dialog" aria-labelledby="bibtex-dialog-title">
+			<div class="dialog__head">
+				<h2 id="bibtex-dialog-title" class="dialog__title">BibTeX Citation</h2>
+				<button type="button" class="icon-btn" data-dialog-close aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg></button>
+			</div>
+			<div class="dialog__body">
+				<div id="bibtex-note" class="dialog__note" hidden>
+					<p>
+						<strong>💡 Random Author Ordering:</strong> To generate random author order in BibTeX citations, use the <a href="https://github.com/ShiroTakeda/econ-bst" target="_blank" rel="noopener noreferrer">econ-bst template</a> and add <code>nameorder = {random}</code> to your BibTeX entries. This implements the "certified random order" proposed by Ray &amp; Robson (AER, 2018).
+					</p>
+				</div>
+				<pre class="dialog__code"><code id="bibtex-output"></code></pre>
+			</div>
+			<div class="dialog__actions">
+				<button type="button" class="btn btn--primary" id="bibtex-copy"><svg class="icon" aria-hidden="true"><use href="#i-copy"></use></svg> Copy to Clipboard</button>
+			</div>
+		</dialog>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-			<!-- Default Statcounter code for homepage
- -->
-<script type="text/javascript">
-	var sc_project=6261317; 
-	var sc_invisible=0; 
-	var sc_security="f7619f02"; 
-	var sc_text=2; 
-	var scJsHost = "https://";
-	document.write("<sc"+"ript type='text/javascript' src='" +
-	scJsHost+
-	"statcounter.com/counter/counter.js'></"+"script>");
-	</script>
-	<noscript><div class="statcounter"><a title="web statistics"
-	href="https://statcounter.com/" target="_blank"><img
-	class="statcounter"
-	src="https://c.statcounter.com/6261317/0/f7619f02/0/"
-	alt="web statistics"
-	referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-	<!-- End of Statcounter Code -->
-
-	<!-- Typing Animation Script -->
-	<script>
-		document.addEventListener('DOMContentLoaded', function() {
-			const typingElement = document.getElementById('typing-name');
-			const finalText = 'Krzysztof Pytka';
-			const misspellings = ['Krystof', 'Kzryzstof'];
-			
-			let currentMisspellingIndex = 0;
-			let currentCharIndex = 0;
-			let isTypingMisspelling = true;
-			let isDeleting = false;
-			
-			function typeText(text, onComplete) {
-				let charIndex = 0;
-				const typeInterval = setInterval(() => {
-					if (charIndex < text.length) {
-						typingElement.textContent = text.substring(0, charIndex + 1);
-						charIndex++;
-					} else {
-						clearInterval(typeInterval);
-						setTimeout(onComplete, 200); // Wait before next action
-					}
-				}, 50); // Typing speed
-			}
-			
-			function deleteText(onComplete) {
-				let currentText = typingElement.textContent;
-				const deleteInterval = setInterval(() => {
-					if (currentText.length > 0) {
-						currentText = currentText.substring(0, currentText.length - 1);
-						typingElement.textContent = currentText;
-					} else {
-						clearInterval(deleteInterval);
-						setTimeout(onComplete, 100); // Wait before typing next
-					}
-				}, 30); // Deletion speed
-			}
-			
-			function animateMisspellings() {
-				if (currentMisspellingIndex < misspellings.length) {
-					const misspelling = misspellings[currentMisspellingIndex];
-					
-					typeText(misspelling, () => {
-						setTimeout(() => {
-							deleteText(() => {
-								currentMisspellingIndex++;
-								animateMisspellings();
-							});
-						}, 150); // Hold misspelling for 150ms
-					});
-				} else {
-					// All misspellings done, type the final correct name
-					setTimeout(() => {
-						typeText(finalText, () => {
-							// Animation complete
-						});
-					}, 100);
-				}
-			}
-			
-					// Start the animation
-		setTimeout(() => {
-			animateMisspellings();
-		}, 1000); // Wait 1 second after page load
-	});
-	</script>
-
-	<!-- BibTeX JavaScript -->
-	<script>
-		function showBibtex(bibtexId) {
-			const bibtexDiv = document.getElementById(bibtexId);
-			
-			if (bibtexDiv) {
-				const bibtexContent = bibtexDiv.innerHTML;
-				const encodedContent = encodeURIComponent(bibtexContent);
-				const url = 'bibtex-template.html?content=' + encodedContent;
-				
-				window.open(url, '_blank', 'width=600,height=500,scrollbars=yes,resizable=yes');
-			}
-		}
-	</script>
+		<!-- Default Statcounter code for homepage -->
+		<script type="text/javascript">
+			var sc_project=6261317;
+			var sc_invisible=0;
+			var sc_security="f7619f02";
+			var sc_text=2;
+			var scJsHost = "https://";
+			document.write("<sc"+"ript type='text/javascript' src='" +
+			scJsHost+
+			"statcounter.com/counter/counter.js'></"+"script>");
+		</script>
+		<noscript><div class="statcounter"><a title="web statistics"
+		href="https://statcounter.com/" target="_blank"><img
+		class="statcounter"
+		src="https://c.statcounter.com/6261317/0/f7619f02/0/"
+		alt="web statistics"
+		referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+		<!-- End of Statcounter Code -->
 
 	</body>
 </html>

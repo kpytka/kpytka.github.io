@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://kpytka.eu/</loc>
+    <lastmod>2026-11-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://kpytka.eu/CV.pdf</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kpytka.eu/Looking_into_the_Consumption_Black_Box.pdf</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kpytka.eu/Shopping_Frictions.pdf</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kpytka.eu/Understanding_the_Sources_of_Earnings_Losses.pdf</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kpytka.eu/Consumption_Elective.pdf</loc>
+    <priority>0.6</priority>
+  </url>
+</urlset>
