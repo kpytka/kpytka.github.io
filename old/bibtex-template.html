@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="robots" content="noindex" />
+    <title>BibTeX Citation</title>
+    <style>
+        body { 
+            font-family: "Courier New", monospace; 
+            background-color: #1b1f22; 
+            color: #e6e6e6; 
+            margin: 0; 
+            padding: 2rem; 
+        }
+                       h1 { 
+                   color: #ffffff; 
+                   border-bottom: 2px solid #4A90E2; 
+                   padding-bottom: 0.5rem; 
+                   margin-bottom: 2rem; 
+               }
+        pre { 
+            background-color: #2a2e31; 
+            color: #e6e6e6; 
+            padding: 1.5rem; 
+            border-radius: 6px; 
+            border: 1px solid #444; 
+            overflow-x: auto; 
+        }
+                       .copy-btn { 
+                   background: #4A90E2; 
+                   color: white; 
+                   padding: 10px 20px; 
+                   border: none; 
+                   border-radius: 5px; 
+                   cursor: pointer; 
+                   font-size: 1rem;
+               }
+               .copy-btn:hover { 
+                   background: #357ABD; 
+               }
+    </style>
+</head>
+<body>
+    <h1>BibTeX Citation</h1>
+    <div id="random-order-info" style="display: none; margin-bottom: 1.5rem; padding: 1rem; background-color: #2a2e31; border-radius: 6px; border-left: 4px solid #4A90E2;">
+        <p style="margin: 0; color: #e6e6e6; font-size: 0.9rem;">
+            <strong>💡 Random Author Ordering:</strong> To generate random author order in BibTeX citations, use the <a href="https://github.com/ShiroTakeda/econ-bst" target="_blank" style="color: #4A90E2;">econ-bst template</a> and add <code>nameorder = {random}</code> to your BibTeX entries. This implements the "certified random order" proposed by Ray & Robson (AER, 2018).
+        </p>
+    </div>
+    <div id="bibtex-content"></div>
+    <br><br>
+    <button class="copy-btn" onclick="copyBibtex()">Copy to Clipboard</button>
+    
+    <script>
+        function copyBibtex() {
+            const bibtexPre = document.querySelector('pre');
+            if (bibtexPre) {
+                const bibtexText = bibtexPre.textContent;
+                
+                navigator.clipboard.writeText(bibtexText).then(function() {
+                    alert('Copied to clipboard!');
+                }).catch(function(err) {
+                    // Fallback for older browsers
+                    const textArea = document.createElement('textarea');
+                    textArea.value = bibtexText;
+                    document.body.appendChild(textArea);
+                    textArea.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(textArea);
+                    alert('Copied to clipboard!');
+                });
+            }
+        }
+        
+        // Get the BibTeX content from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const bibtexContent = urlParams.get('content');
+        
+        if (bibtexContent) {
+            document.getElementById('bibtex-content').innerHTML = decodeURIComponent(bibtexContent);
+            
+            // Check if this is the pytka_runge_2025 paper and show random order info
+            if (bibtexContent.includes('pytka_runge_2025')) {
+                document.getElementById('random-order-info').style.display = 'block';
+                // Resize window to accommodate the additional content
+                window.resizeTo(window.outerWidth, window.outerHeight + 100);
+            }
+        }
+    </script>
+</body>
+</html>
